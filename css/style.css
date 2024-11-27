@@ -13,7 +13,6 @@
     box-sizing: border-box;
     outline: none; border:none;
     text-decoration: none;
-    text-transform: capitalize;
     transition: .2s linear;
 }
 
@@ -35,10 +34,6 @@ html::-webkit-scrollbar-track{
 html::-webkit-scrollbar-thumb{
     background: #fff;
     border-radius: 5rem;
-}
-
-body{
-    background: var(--bg);
 }
 
 section{
@@ -77,7 +72,7 @@ section{
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    padding: 1.5rem %;
+    padding: 1.5rem;
     border-bottom: var(--border);
     position: fixed;
     top: 0; left: 0; right: 0;
@@ -93,53 +88,53 @@ section{
     transform: translateY(5rem);
 }
 
-}
-
 .header .navbar{
     flex: 2;
     display: flex;
     justify-content: center;
 }
 
-.header .navbar a{
-    margin:0 2rem;  /* Aumentei o espaçamento entre os links */
+.header .navbar a {
+    margin: 0 3rem;  /* Aumentei o espaçamento entre os links */
     font-size: 1.6rem;
-    color:#fff;
+    color: #fff;
     text-align: center;
 }
 
-.header .navbar a:hover{
-    color:var(--main-color);
-    border-bottom: .1rem solid var(--main-color);
-    padding-bottom: .5rem;
+.header .navbar a:hover {
+    color: var(--main-color);
+    border-bottom: 0.1rem solid var(--main-color);
+    padding-bottom: 0.5rem;
 }
 
-.home{
+.home {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background:url(../images/raquete-transformed.jpeg) no-repeat;
-    background-size: contain;
-    background-position: center;
+    justify-content: center; /* Certifique-se de que o conteúdo esteja centralizado */
+    background: url(../images/raquete-transformed.jpeg) no-repeat;
+    background-size: cover; /* Faz com que a imagem cubra toda a tela */
+    background-attachment: fixed; /* Aplica o efeito parallax */
+    background-position: center center; /* Garante que a imagem esteja centralizada */
 }
 
-.home .content{
+.home .content {
     max-width: 60rem;
     text-align: center;
+    z-index: 2;  /* Garante que o conteúdo (texto) esteja acima da imagem */
 }
 
-.home .content h3{
+.home .content h3 {
     font-size: 6rem;
-    text-transform: uppercase;
-    color:#fff;
+    color: #ffffff;  /* Texto claro para contraste */
 }
 
-.home .content p{
+.home .content p {
     font-size: 2rem;
     font-weight: lighter;
     line-height: 1.8;
-    padding:1rem 0;
-    color:#eee;
+    padding: 1rem 0;
+    color: #ffffff;  /* Texto claro */
 }
 
 .about .row{
@@ -165,7 +160,11 @@ section{
     font-size: 3rem;
     color:#fff;
 }
+#cort{
+    color:whitesmoke;
+    text-decoration: none;
 
+}
 .about .row .content p{
     font-size: 1.6rem;
     color:#ccc;
@@ -360,7 +359,6 @@ section{
     background:none;
 }
 
-
 .footer{
     background:var(--black);
     text-align: center;
@@ -415,13 +413,9 @@ section{
     color:var(--main-color);
 }
 
+/* -------------------------------------------------------------------------------------------------------------------------- */
 
-
-
-
-
-
-/* media queries  */
+/* MEDIA QUERIES  */
 @media (max-width:991px){
 
     html{
@@ -492,44 +486,64 @@ section{
     }
 
 }
-/* Estilização da seção Criador */
-/* Seção do Criador */
-.creator .row {
-    display: flex;
-    align-items: center;
-    background: var(--black);
-    flex-wrap: wrap;
-    padding: 2rem 7%;
-}
 
-.creator .row .image {
-    flex: 1 1 40%;
-    padding: 1rem;
-}
-
-.creator .row .image img {
+/* Estilo da seção Criador do Projeto */
+#criador{
+        display: grid;
+        grid-template-columns: 5fr 8fr; /* Ajuste da proporção para 5x8 */
+        gap: 25px;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        margin: 0 auto;
+        background-image: linear-gradient(135deg, #006400, #000000);
     width: 100%;
-    border-radius: 10px; /* Ajuste para dar um efeito de borda arredondada */
-    object-fit: cover;
-}
-
-.creator .row .content {
-    flex: 1 1 55%;
-    padding: 2rem;
-}
-
-.creator .row .content h3 {
-    font-size: 3rem;
-    color: #fff;
-}
-
-.creator .row .content p {
-    font-size: 1.6rem;
-    color: #ccc;
-    line-height: 1.8;
-}
-
-
+    margin: 0 auto;
+    color: white;
+    overflow: hidden;
+    }
+    
+    #larte {
+        width: 100%;
+        height: 100%; /* Garante que a imagem ocupe toda a altura disponível */
+        object-fit: cover; /* Faz a imagem se ajustar ao container sem distorcer */
+        object-position: left; /* Alinha a imagem à esquerda */
+        z-index: 98;
+        animation: slideInRight 1.5s 2s;
+    }
+    
+    #fotoProjeto {
+        display: flex;
+        flex-direction: column; /* Organiza o conteúdo verticalmente */
+        justify-content: center;
+        align-items: flex-start;
+        padding: 0 2rem;
+    }
+    
+    #fotoProjeto h2 {
+        font-size: 2.5rem;
+        color: #fff;
+        margin-bottom: 1rem;
+    }
+    
+    #fotoProjeto p {
+        font-size: 1.5rem;
+        color: #ccc;
+        line-height: 1.8;
+        max-width: 600px;
+    }
+    
+    /* Adiciona um efeito de transição ou animação */
+    @keyframes slideInRight {
+        0% {
+            transform: translateX(100%);
+        }
+        100% {
+            transform: translateX(0);
+        }
+    }
+    
 /* Estilização da seção Parceiros */
 .partners {
     padding: 5rem 7%;
@@ -550,16 +564,13 @@ section{
     justify-items: center;
 }
 
-.partners .box {
+.partners .box img {
     background: #fff;
     padding: 2rem;
     text-align: center;
     border-radius: 1rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;
-}
-
-.partners .box img {
     max-width: 100%;
     max-height: 10rem;
     object-fit: contain;
@@ -567,5 +578,77 @@ section{
 
 .partners .box:hover {
     transform: scale(1.05);
+}
+
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    text-align: center; /* Centraliza todo o texto no corpo */
+}
+
+.about-section {
+    padding: 4rem 2rem;
+}
+
+.about-row {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centraliza os itens na linha */
+    margin-bottom: 4rem;
+    gap: 2rem;
+    text-align: center; /* Centraliza os textos nas colunas */
+}
+
+.about-row.reverse {
+    flex-direction: row-reverse; /* Reverte a ordem para alternar */
+}
+
+.about-image img {
+    max-width: 110%; /* Aumenta a largura da imagem */
+    height: auto;
+    border-radius: 10px; /* Suaviza as bordas */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.05); /* Suaviza a borda e integra a imagem ao fundo */
+    margin: -1rem 0; /* Ajusta a margem para remover o branco */
+}
+
+.about-content {
+    max-width: 600px;
+    text-align: center; /* Garante que o texto do conteúdo seja centralizado */
+}
+
+.about-content h2 {
+    font-size: 3rem; /* Título maior */
+    color: var(--text-color);
+    margin-bottom: 1rem;
+    text-transform: uppercase; /* Deixa os títulos em caixa alta */
+    letter-spacing: 2px; /* Espaçamento entre as letras */
+}
+
+.about-content h2 span {
+    color: var(--main-color);
+}
+
+.about-content p {
+    font-size: 1.2rem;
+    color: var(--light-color);
+    margin-bottom: 1.5rem;
+}
+
+
+/* Efeito cascata para os títulos */
+.about-row:nth-child(1) .about-content h2 {
+    font-size: 3rem; /* "Nossa História" maior */
+}
+
+.about-row:nth-child(2) .about-content h2 {
+    font-size: 2.8rem; /* "Nossa Missão" ligeiramente menor */
+}
+
+.about-row:nth-child(3) .about-content h2 {
+    font-size: 2.6rem; /* "Como Impactamos" ainda menor */
 }
 
