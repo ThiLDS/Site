@@ -1,64 +1,66 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
 
-:root{
-    --main-color:#61e00d;
-    --black:hsl(240, 16%, 9%);
-    --bg:#000000;
-    --border:.1rem solid rgba(255,255,255,.3);
+:root {
+    --main-color: #61e00d;
+    --black: hsl(240, 16%, 9%);
+    --bg: #000000;
+    --border: .1rem solid rgba(255, 255, 255, .3);
 }
 
-*{
+* {
     font-family: 'Roboto', sans-serif;
-    margin:0; padding:0;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    outline: none; border:none;
+    outline: none;
+    border: none;
     text-decoration: none;
     transition: .2s linear;
 }
 
-html{
+html {
     font-size: 62.5%;
     overflow-x: hidden;
     scroll-padding-top: 9rem;
     scroll-behavior: smooth;
 }
 
-html::-webkit-scrollbar{
+html::-webkit-scrollbar {
     width: .8rem;
 }
 
-html::-webkit-scrollbar-track{
+html::-webkit-scrollbar-track {
     background: transparent;
 }
 
-html::-webkit-scrollbar-thumb{
+html::-webkit-scrollbar-thumb {
     background: #fff;
     border-radius: 5rem;
 }
 
-section{
-    padding:2rem 7%;
+section {
+    padding: 2rem 7%;
 }
 
-.heading{
+.heading {
     text-align: center;
-    color:#fff;
+    color: #fff;
     text-transform: uppercase;
     padding-bottom: 3.5rem;
     font-size: 4rem;
 }
 
-.heading span{
-    color:var(--main-color);
+.heading span {
+    color: var(--main-color);
     text-transform: uppercase;
 }
 
-.btn{
+.btn {
     margin-top: 1rem;
     display: inline-block;
-    padding:.9rem 3rem;
+    padding: .9rem 3rem;
     font-size: 1.7rem;
-    color:#fff;
+    color: #fff;
     background: var(--main-color);
     cursor: pointer;
 }
@@ -71,27 +73,35 @@ section{
     padding: 1.5rem;
     border-bottom: var(--border);
     position: fixed;
-    top: 0; left: 0; right: 0;
+    top: 0;
+    left: 0;
+    right: 0;
     z-index: 1000;
-    height: 10rem;  /* Tamanho fixo da navbar */
+    height: 10rem;
+    /* Tamanho fixo da navbar */
 }
 
 .header .logo img {
-    height: 28rem; /* A altura da logo será igual à altura da navbar */
-    width: auto;  /* Manter a proporção da imagem */
-    transform: scale(0); /* Aumentar a logo para 1.5x do tamanho original */
-    transform-origin: center; /* Garantir que a imagem aumente de forma proporcional */
+    height: 28rem;
+    /* A altura da logo será igual à altura da navbar */
+    width: auto;
+    /* Manter a proporção da imagem */
+    transform: scale(0);
+    /* Aumentar a logo para 1.5x do tamanho original */
+    transform-origin: center;
+    /* Garantir que a imagem aumente de forma proporcional */
     transform: translateY(5rem);
 }
 
-.header .navbar{
+.header .navbar {
     flex: 2;
     display: flex;
     justify-content: center;
 }
 
 .header .navbar a {
-    margin: 0 3rem;  /* Aumentei o espaçamento entre os links */
+    margin: 0 3rem;
+    /* Aumentei o espaçamento entre os links */
     font-size: 1.6rem;
     color: #fff;
     text-align: center;
@@ -124,25 +134,29 @@ section{
 
 /* Fonte para o título */
 .home .content h3 {
-    font-family: 'Poppins', sans-serif; /* Aplica a fonte Poppins ao título */
+    font-family: 'Poppins', sans-serif;
+    /* Aplica a fonte Poppins ao título */
     font-size: 6rem;
     font-weight: bold;
     text-transform: uppercase;
     color: #ffffff;
     animation: zoomIn 2s ease-out;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Sombra para destaque */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    /* Sombra para destaque */
 }
 
 /* Fonte para o parágrafo */
 .home .content p {
-    font-family: 'Roboto', sans-serif; /* Aplica a fonte Roboto ao parágrafo */
+    font-family: 'Roboto', sans-serif;
+    /* Aplica a fonte Roboto ao parágrafo */
     font-size: 2.5rem;
     font-weight: lighter;
     line-height: 1.8;
     padding: 1rem 0;
     color: #ffffff;
     animation: bounce 3s infinite ease-in-out;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Sombra suave */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+    /* Sombra suave */
 }
 
 
@@ -153,9 +167,11 @@ section{
     align-items: center;
     justify-content: center;
     background: url(../images/raquete-transformed.jpeg) no-repeat center center fixed;
-    background-size: cover; /* Ajusta a imagem de fundo */
+    background-size: cover;
+    /* Ajusta a imagem de fundo */
     background-attachment: fixed;
-    position: relative; /* Necessário para o efeito de sobreposição */
+    position: relative;
+    /* Necessário para o efeito de sobreposição */
 }
 
 /* Overlay para escurecer a imagem de fundo e destacar o conteúdo */
@@ -166,14 +182,16 @@ section{
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.5); /* Escurecimento suave */
+    background: rgba(0, 0, 0, 0.5);
+    /* Escurecimento suave */
     z-index: 1;
 }
 
 /* Conteúdo centralizado */
 .home .content {
     position: relative;
-    z-index: 2; /* Garante que o conteúdo fique acima do overlay */
+    z-index: 2;
+    /* Garante que o conteúdo fique acima do overlay */
     text-align: center;
     color: white;
     max-width: 70rem;
@@ -183,12 +201,14 @@ section{
 /* Título principal */
 .home .content h3 {
     font-size: 6rem;
-    font-family: 'Poppins', sans-serif; /* Fonte moderna */
+    font-family: 'Poppins', sans-serif;
+    /* Fonte moderna */
     font-weight: bold;
     text-transform: uppercase;
     color: #ffffff;
     animation: zoomIn 2s ease-out;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Sombra para destaque */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    /* Sombra para destaque */
 }
 
 /* Efeito de zoom para o título */
@@ -197,6 +217,7 @@ section{
         transform: scale(0.5);
         opacity: 0;
     }
+
     100% {
         transform: scale(1);
         opacity: 1;
@@ -216,7 +237,8 @@ section{
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
     overflow: hidden;
     white-space: nowrap;
-    border-right: 0.05em solid #fff; /* Barrinha bem fina */
+    border-right: 0.05em solid #fff;
+    /* Barrinha bem fina */
     width: 0;
     animation: typing 4s steps(30) 1s 1 normal both, blink 0.75s step-end infinite;
 }
@@ -227,6 +249,7 @@ section{
     0% {
         width: 0;
     }
+
     100% {
         width: 100%;
     }
@@ -234,9 +257,12 @@ section{
 
 /* Animação de piscar o cursor (efeito de underline que pisca) */
 @keyframes blink {
-    0%, 100% {
+
+    0%,
+    100% {
         border-color: transparent;
     }
+
     50% {
         border-color: #fff;
     }
@@ -246,37 +272,48 @@ section{
 /* Botão */
 .home .content a.btn {
     display: inline-block;
-    padding: 1.2rem 3rem; /* Aumenta o tamanho do botão */
-    background-color: #4CAF50; /* Verde mais claro */
+    padding: 1.2rem 3rem;
+    /* Aumenta o tamanho do botão */
+    background-color: #4CAF50;
+    /* Verde mais claro */
     color: white;
     text-decoration: none;
-    font-size: 1.8rem; /* Aumenta o tamanho da fonte */
-    border-radius: 50px; /* Botão mais arredondado */
+    font-size: 1.8rem;
+    /* Aumenta o tamanho da fonte */
+    border-radius: 50px;
+    /* Botão mais arredondado */
     font-weight: bold;
     margin-top: 2rem;
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Adiciona transição para o efeito de "escala" */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    /* Adiciona transição para o efeito de "escala" */
 }
 
 /* Hover */
 .home .content a.btn:hover {
-    background-color: #45a049; /* Verde um pouco mais claro que o original */
-    transform: scale(1.2); /* Efeito de zoom suave no hover */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Adiciona sombra para dar mais destaque */
+    background-color: #45a049;
+    /* Verde um pouco mais claro que o original */
+    transform: scale(1.2);
+    /* Efeito de zoom suave no hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    /* Adiciona sombra para dar mais destaque */
 }
 
 
 /* Responsividade para telas pequenas */
 @media (max-width: 768px) {
     .home .content h3 {
-        font-size: 4rem; /* Ajusta o tamanho do título para telas menores */
+        font-size: 4rem;
+        /* Ajusta o tamanho do título para telas menores */
     }
 
     .home .content p {
-        font-size: 2rem; /* Ajusta o tamanho do texto */
+        font-size: 2rem;
+        /* Ajusta o tamanho do texto */
     }
 
     .home .content a.btn {
-        font-size: 1.2rem; /* Ajusta o tamanho do botão */
+        font-size: 1.2rem;
+        /* Ajusta o tamanho do botão */
         padding: 1rem 1.5rem;
     }
 }
@@ -284,242 +321,244 @@ section{
 /* Estilo da seção "about" */
 .about-section {
     padding: 5rem 7%;
-    background-color: #ffffff; /* Branco puro */
+    background-color: #ffffff;
+    /* Branco puro */
 }
 
 
-.products .box-container{
+.products .box-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-    gap:1.5rem;
+    gap: 1.5rem;
 }
 
-.products .box-container .box{
+.products .box-container .box {
     text-align: center;
-    border:var(--border);
+    border: var(--border);
     padding: 2rem;
 }
 
-.products .box-container .box .icons a{
+.products .box-container .box .icons a {
     height: 5rem;
     width: 5rem;
     line-height: 5rem;
     font-size: 2rem;
-    border:var(--border);
-    color:#fff;
-    margin:.3rem;
+    border: var(--border);
+    color: #fff;
+    margin: .3rem;
 }
 
 
-.review .box-container{
+.review .box-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-    gap:1.5rem;
+    gap: 1.5rem;
 }
 
-.review .box-container .box{
-    border:var(--border);
+.review .box-container .box {
+    border: var(--border);
     text-align: center;
-    padding:3rem 2rem;
+    padding: 3rem 2rem;
 }
 
-.review .box-container .box p{
+.review .box-container .box p {
     font-size: 1.5rem;
     line-height: 1.8;
-    color:#ccc;
-    padding:2rem 0;
+    color: #ccc;
+    padding: 2rem 0;
 }
 
-.review .box-container .box .user{
+.review .box-container .box .user {
     height: 7rem;
     width: 7rem;
     border-radius: 50%;
     object-fit: cover;
 }
 
-.review .box-container .box h3{
-    padding:1rem 0;
+.review .box-container .box h3 {
+    padding: 1rem 0;
     font-size: 2rem;
-    color:#fff;
+    color: #fff;
 }
 
-.review .box-container .box .stars i{
+.review .box-container .box .stars i {
     font-size: 1.5rem;
-    color:var(--main-color);
+    color: var(--main-color);
 }
 
-.contact .row{
+.contact .row {
     display: flex;
-    background:var(--black);
+    background: var(--black);
     flex-wrap: wrap;
-    gap:1rem;
+    gap: 1rem;
 }
 
-.contact .row .map{
-    flex:1 1 45rem;
+.contact .row .map {
+    flex: 1 1 45rem;
     width: 100%;
     object-fit: cover;
 }
 
-.contact .row form{
-    flex:1 1 45rem;
-    padding:5rem 2rem;
+.contact .row form {
+    flex: 1 1 45rem;
+    padding: 5rem 2rem;
     text-align: center;
 }
 
-.contact .row form h3{
+.contact .row form h3 {
     text-transform: uppercase;
     font-size: 3.5rem;
-    color:#fff;
+    color: #fff;
 }
 
-.contact .row form .inputBox{
+.contact .row form .inputBox {
     display: flex;
     align-items: center;
     margin-top: 2rem;
     margin-bottom: 2rem;
-    background:var(--bg);
-    border:var(--border);
+    background: var(--bg);
+    border: var(--border);
 }
 
-.contact .row form .inputBox span{
-    color:#fff;
+.contact .row form .inputBox span {
+    color: #fff;
     font-size: 2rem;
     padding-left: 2rem;
 }
 
-.contact .row form .inputBox input{
+.contact .row form .inputBox input {
     width: 100%;
-    padding:2rem;
+    padding: 2rem;
     font-size: 1.7rem;
-    color:#fff;
+    color: #fff;
     text-transform: none;
-    background:none;
+    background: none;
 }
 
-.footer{
-    background:var(--black);
+.footer {
+    background: var(--black);
     text-align: center;
 }
 
-.footer .share{
-    padding:1rem 0;
+.footer .share {
+    padding: 1rem 0;
 }
 
-.footer .share a{
+.footer .share a {
     height: 5rem;
     width: 5rem;
     line-height: 5rem;
     font-size: 2rem;
-    color:#fff;
-    border:var(--border);
-    margin:.3rem;
+    color: #fff;
+    border: var(--border);
+    margin: .3rem;
     border-radius: 50%;
 }
 
-.footer .share a:hover{
+.footer .share a:hover {
     background-color: var(--main-color);
 }
 
-.footer .links{
+.footer .links {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    padding:2rem 0;
-    gap:1rem;
+    padding: 2rem 0;
+    gap: 1rem;
 }
 
-.footer .links a{
-    padding:.7rem 2rem;
-    color:#fff;
-    border:var(--border);
+.footer .links a {
+    padding: .7rem 2rem;
+    color: #fff;
+    border: var(--border);
     font-size: 2rem;
 }
 
-.footer .links a:hover{
-    background:var(--main-color);
+.footer .links a:hover {
+    background: var(--main-color);
 }
 
-.footer .credit{
+.footer .credit {
     font-size: 2rem;
-    color:#fff;
+    color: #fff;
     font-weight: lighter;
-    padding:1.5rem;
+    padding: 1.5rem;
 }
 
-.footer .credit span{
-    color:var(--main-color);
+.footer .credit span {
+    color: var(--main-color);
 }
 
 /* -------------------------------------------------------------------------------------------------------------------------- */
 
 /* MEDIA QUERIES  */
-@media (max-width:991px){
+@media (max-width:991px) {
 
-    html{
+    html {
         font-size: 55%;
     }
 
-    .header{
-        padding:1.5rem 2rem;
+    .header {
+        padding: 1.5rem 2rem;
     }
 
-    section{
-        padding:2rem;
+    section {
+        padding: 2rem;
     }
 
 }
 
-@media (max-width:768px){
+@media (max-width:768px) {
 
-    #menu-btn{
+    #menu-btn {
         display: inline-block;
     }
 
-    .header .navbar{
+    .header .navbar {
         position: absolute;
-        top:100%; right: -100%;
+        top: 100%;
+        right: -100%;
         background: #fff;
         width: 30rem;
         height: calc(100vh - 9.5rem);
     }
 
-    .header .navbar.active{
-        right:0;
+    .header .navbar.active {
+        right: 0;
     }
 
-    .header .navbar a{
-        color:var(--black);
+    .header .navbar a {
+        color: var(--black);
         display: block;
-        margin:1.5rem;
-        padding:.5rem;
+        margin: 1.5rem;
+        padding: .5rem;
         font-size: 2rem;
     }
 
-    .header .search-form{
+    .header .search-form {
         width: 90%;
         right: 2rem;
     }
 
-    .home{
+    .home {
         background-position: left;
         justify-content: center;
         text-align: center;
     }
 
-    .home .content h3{
+    .home .content h3 {
         font-size: 4.5rem;
     }
 
-    .home .content p{
+    .home .content p {
         font-size: 1.5rem;
     }
 
 }
 
-@media (max-width:450px){
+@media (max-width:450px) {
 
-    html{
+    html {
         font-size: 50%;
     }
 
@@ -528,29 +567,35 @@ section{
 /* Estilo da seção Criador do Projeto */
 #criador {
     display: grid;
-    grid-template-columns: 5fr 8fr; /* Define o layout */
+    grid-template-columns: 5fr 8fr;
+    /* Define o layout */
     gap: 25px;
     text-align: center;
     align-items: center;
     justify-content: center;
     width: 100%;
     margin: 0 auto;
-    background: linear-gradient(135deg, #000000, #808080); /* Fundo gradiente preto e cinza */
+    background: linear-gradient(135deg, #000000, #808080);
+    /* Fundo gradiente preto e cinza */
     color: white;
     overflow: hidden;
 }
 
 #larte {
-    width: 90%; /* Aumenta a largura da imagem */
+    width: 90%;
+    /* Aumenta a largura da imagem */
     max-width: 450px;
     height: auto;
     object-fit: contain;
     object-position: center;
     margin: 0 auto;
-    opacity: 0; /* Inicialmente invisível */
-    animation: fadeInImage 2s ease-in-out forwards; /* Efeito de fade-in */
-    filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.5)); /* Adiciona sombra */
-    
+    opacity: 0;
+    /* Inicialmente invisível */
+    animation: fadeInImage 2s ease-in-out forwards;
+    /* Efeito de fade-in */
+    filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.5));
+    /* Adiciona sombra */
+
     /* Efeito de bordas ofuscadas */
     -webkit-mask-image: linear-gradient(to right,
             rgba(0, 0, 0, 0),
@@ -570,11 +615,14 @@ section{
 @keyframes fadeInImage {
     0% {
         opacity: 0;
-        transform: scale(0.8); /* Leve redução inicial */
+        transform: scale(0.8);
+        /* Leve redução inicial */
     }
+
     100% {
         opacity: 1;
-        transform: scale(1); /* Tamanho original */
+        transform: scale(1);
+        /* Tamanho original */
     }
 }
 
@@ -584,15 +632,18 @@ section{
     justify-content: center;
     align-items: flex-start;
     padding: 0 2rem;
-    animation: fadeInText 2s ease-in-out forwards; /* Fade para o texto */
+    animation: fadeInText 2s ease-in-out forwards;
+    /* Fade para o texto */
 }
 
 /* Animação de fade para o texto */
 @keyframes fadeInText {
     0% {
         opacity: 0;
-        transform: translateX(-20px); /* Começa deslocado */
+        transform: translateX(-20px);
+        /* Começa deslocado */
     }
+
     100% {
         opacity: 1;
         transform: translateX(0);
@@ -615,7 +666,8 @@ section{
 /* Responsividade */
 @media (max-width: 768px) {
     #criador {
-        grid-template-columns: 1fr; /* Reorganiza layout */
+        grid-template-columns: 1fr;
+        /* Reorganiza layout */
         gap: 15px;
         padding: 1rem;
     }
@@ -636,103 +688,83 @@ section{
 
 
 /* Estilização da seção Parceiros */
-/* Estilo da seção de parceiros */
 .partners {
-    padding: 5rem 7%;
-    background-color: #f7f7f7; /* Cor de fundo neutra e clara */
-}
-
-.partners .heading h3 {
-    color: #333; /* Cor suave para o título */
-    font-size: 3.5rem;
+    padding: 6rem 10%;
+    background-color: var(--primary-color-light);
+    /* Fundo liso e destacado */
+    margin: 2rem 0;
+    /* Espaçamento para se alinhar ao restante do layout */
     text-align: center;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 700;
-    margin-bottom: 2rem;
-    position: relative;
 }
 
-.partners .heading h3::after {
-    content: '';
-    position: absolute;
-    width: 50px;
-    height: 3px;
-    background-color: var(--primary-color); /* Cor personalizada */
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
+.partners h2 {
+    font-size: 4.5rem;
+    /* Aumenta o tamanho da fonte */
+    font-weight: bold;
+    color: var(--main-color);
+    /* Cor principal */
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+    text-shadow: 0 0 10px rgba(97, 224, 13, 0.8), 0 0 20px rgba(97, 224, 13, 0.6);
+    /* Brilho */
+    animation: glow 2s infinite alternate;
+    /* Efeito de brilho contínuo */
 }
 
 .partners .box-container {
-    overflow: hidden; /* Esconde o conteúdo fora da área visível */
-    width: 100%; /* Garante que o contêiner ocupe toda a largura */
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    /* Espaço entre as linhas */
 }
 
-.partners .partners-slider {
+.partners .row {
     display: flex;
-    width: max-content; /* Faz com que os elementos fiquem em linha */
-    animation: slide 30s linear infinite; /* Animação contínua */
+    justify-content: center;
+    gap: 4rem;
+    /* Espaçamento entre os elementos da linha */
 }
 
 .partners .box {
-    background: #fff; /* Fundo branco para destacar as imagens */
-    padding: 2rem;
-    text-align: center;
+    background: #fff;
+    padding: 1rem;
     border-radius: 1rem;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra mais suave */
-    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-right: 2rem; /* Espaço entre as logos */
-    flex-shrink: 0; /* Impede que as logos encolham */
-    height: 12rem; /* Tamanho fixo para as logos */
+    width: 180px;
+    /* Ajuste médio para as imagens */
+    height: 180px;
 }
 
 .partners .box img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain; /* Assegura que a imagem se ajuste corretamente dentro da caixa */
+    width: 90%;
+    height: 90%;
+    object-fit: contain;
 }
 
-/* Animação do deslizamento horizontal */
-@keyframes slide {
-    0% {
-        transform: translateX(0); /* Começa do início */
-    }
-    100% {
-        transform: translateX(-50%); /* Move as imagens para a esquerda até metade do tamanho total */
-    }
+.partners .box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    /* Efeito no hover */
 }
 
 /* Responsividade */
 @media (max-width: 768px) {
-    .partners .box-container {
-        padding: 0 10%;
+    .partners .row {
+        flex-wrap: wrap;
+        gap: 1.5rem;
     }
-    .partners .partners-slider {
-        animation-duration: 40s; /* Um pouco mais lento em telas menores */
-    }
-}
 
-@media (max-width: 480px) {
-    .partners .heading h3 {
-        font-size: 2.5rem; /* Reduzindo o tamanho do título em dispositivos pequenos */
-    }
     .partners .box {
-        padding: 1rem;
-        height: 10rem; /* Ajustando altura das boxes em telas menores */
+        width: 150px;
+        height: 150px;
     }
 }
 
 
-
-:root {
-    --bg-color: #f9f9f9; /* Cor de fundo suave */
-    --text-color: #333333; /* Cor padrão do texto */
-    --main-color: #4CAF50; /* Cor principal para destaque (ex: botões, títulos) */
-    --light-color: #777777; /* Cor mais suave para o texto secundário */
-}
 
 body {
     font-family: 'Roboto', sans-serif;
@@ -744,22 +776,28 @@ body {
 }
 
 .about-section {
-    padding: 8rem 2rem; /* Aumentando o espaçamento superior e inferior */
+    padding: 8rem 2rem;
+    /* Aumentando o espaçamento superior e inferior */
     background-color: var(--bg-color);
     position: relative;
-    min-height: 100vh; /* Aumenta a altura para dar mais presença */
+    min-height: 100vh;
+    /* Aumenta a altura para dar mais presença */
 }
 
 .about-row {
     display: flex;
     align-items: center;
-    justify-content: center; /* Centraliza os itens na linha */
-    margin-bottom: 8rem; /* Aumenta o espaço entre as seções */
-    gap: 4rem; /* Aumenta o espaçamento entre as imagens e o texto */
+    justify-content: center;
+    /* Centraliza os itens na linha */
+    margin-bottom: 8rem;
+    /* Aumenta o espaço entre as seções */
+    gap: 4rem;
+    /* Aumenta o espaçamento entre as imagens e o texto */
     position: relative;
     opacity: 0;
     transform: translateY(30px);
-    animation: fadeInUp 1s ease-out forwards; /* Efeito de animação de deslizamento */
+    animation: fadeInUp 1s ease-out forwards;
+    /* Efeito de animação de deslizamento */
 }
 
 /* Efeito de animação quando rolar a página */
@@ -768,6 +806,7 @@ body {
         opacity: 0;
         transform: translateY(30px);
     }
+
     100% {
         opacity: 1;
         transform: translateY(0);
@@ -776,53 +815,83 @@ body {
 
 /* Ajustes para alternar imagem e texto */
 .about-row.reverse {
-    flex-direction: row-reverse; /* Reverte a ordem para alternar */
+    flex-direction: row-reverse;
+    /* Reverte a ordem para alternar */
 }
 
 /* Aplica borda superior direita arredondada nas imagens da primeira e última seção */
 .about-row:first-of-type .about-image img,
 .about-row:last-of-type .about-image img {
-    border-top-right-radius: 120px; /* Arredondamento mais forte na borda superior direita */
-    border-top-left-radius: 0; /* Mantém a borda superior esquerda quadrada */
-    border-bottom-left-radius: 0; /* Mantém a borda inferior esquerda quadrada */
-    border-bottom-right-radius: 0; /* Mantém a borda inferior direita quadrada */
+    border-top-right-radius: 120px;
+    /* Arredondamento mais forte na borda superior direita */
+    border-top-left-radius: 0;
+    /* Mantém a borda superior esquerda quadrada */
+    border-bottom-left-radius: 0;
+    /* Mantém a borda inferior esquerda quadrada */
+    border-bottom-right-radius: 0;
+    /* Mantém a borda inferior direita quadrada */
 }
 
 /* Aplica borda superior esquerda arredondada na imagem do meio */
 .about-row:nth-of-type(2) .about-image img {
-    border-top-left-radius: 120px; /* Arredondamento forte na borda superior esquerda */
-    border-top-right-radius: 0; /* Mantém a borda superior direita quadrada */
-    border-bottom-left-radius: 0; /* Mantém a borda inferior esquerda quadrada */
-    border-bottom-right-radius: 0; /* Mantém a borda inferior direita quadrada */
+    border-top-left-radius: 120px;
+    /* Arredondamento forte na borda superior esquerda */
+    border-top-right-radius: 0;
+    /* Mantém a borda superior direita quadrada */
+    border-bottom-left-radius: 0;
+    /* Mantém a borda inferior esquerda quadrada */
+    border-bottom-right-radius: 0;
+    /* Mantém a borda inferior direita quadrada */
 }
 
 /* Ajustes gerais para as imagens */
 .about-row .about-image img {
-    max-width: 120%; /* Aumenta a largura das imagens */
-    height: auto; /* Ajusta a altura para preservar a proporção */
+    max-width: 120%;
+    /* Aumenta a largura das imagens */
+    height: auto;
+    /* Ajusta a altura para preservar a proporção */
     margin: 0;
-    transition: transform 0.3s ease; /* Transição suave no hover */
-    object-fit: cover; /* Ajusta a imagem para cobrir o espaço */
-    max-height: 650px; /* Define a altura máxima das imagens */
-    box-shadow: 0 0 25px rgba(0, 0, 0, 0.2); /* Adiciona um leve efeito de sombra */
+    transition: transform 0.3s ease;
+    /* Transição suave no hover */
+    object-fit: cover;
+    /* Ajusta a imagem para cobrir o espaço */
+    max-height: 650px;
+    /* Define a altura máxima das imagens */
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+    /* Adiciona um leve efeito de sombra */
 }
 
 /* Para telas maiores */
 @media (min-width: 1200px) {
     .about-row .about-image img {
-        max-width: 130%; /* Aumenta a largura das imagens em telas grandes */
-        max-height: 750px; /* Define uma altura máxima maior */
+        max-width: 130%;
+        /* Aumenta a largura das imagens em telas grandes */
+        max-height: 750px;
+        /* Define uma altura máxima maior */
     }
 }
 
 /* Adicionando hover para realce */
 .about-row .about-image img:hover {
-    transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+    transform: scale(1.05);
+    /* Efeito de zoom ao passar o mouse */
+}
+
+.special-size {
+    width: 800px;
+    /* Define uma largura fixa */
+    height: 800px;
+    /* Define uma altura fixa */
+    object-fit: cover;
+    /* Garante que a imagem preencha o espaço sem distorcer */
+    border-radius: 0;
+    /* Mantém os cantos quadrados, caso necessário */
 }
 
 /* Títulos */
 .about-content h2 {
-    font-size: 5rem; /* Aumenta o tamanho do título */
+    font-size: 5rem;
+    /* Aumenta o tamanho do título */
     color: var(--text-color);
     margin-bottom: 2rem;
     text-transform: uppercase;
@@ -836,10 +905,13 @@ body {
 
 /* Texto do conteúdo */
 .about-content p {
-    font-size: 1.8rem; /* Aumenta o tamanho do texto */
+    font-size: 1.8rem;
+    /* Aumenta o tamanho do texto */
     color: var(--light-color);
-    margin-bottom: 3rem; /* Aumenta o espaçamento entre o parágrafo e o próximo */
-    max-width: 900px; /* Aumenta o tamanho do parágrafo */
+    margin-bottom: 3rem;
+    /* Aumenta o espaçamento entre o parágrafo e o próximo */
+    max-width: 900px;
+    /* Aumenta o tamanho do parágrafo */
     margin: 0 auto;
     line-height: 1.8;
     font-weight: 400;

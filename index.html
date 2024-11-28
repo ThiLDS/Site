@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,250 +8,236 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto:wght@300&display=swap"
+        rel="stylesheet">
+        <script src="script.js"></script>
 
 </head>
 <body>
 
-<header class="header">
-    <a href="#" class="logo">
-        <img src="images/INSTITUTO AECA.png" alt="Logo Instituto AECA">
-    </a>
+    <header class="header">
+        <a href="#" class="logo">
+            <img src="images/INSTITUTO AECA.png" alt="Logo Instituto AECA">
+        </a>
 
-    <nav class="navbar">
-        <a href="#home">Inicio</a>
-        <a href="#about">Sobre nós</a>
-        <a href="#menu">Criador</a>
-        <a href="#products">Parceiros</a>
-        <a href="#review">Inscrição</a>
-    </nav>
-</header>
+        <nav class="navbar">
+            <a href="#home">Inicio</a>
+            <a href="#about">Sobre nós</a>
+            <a href="#menu">Criador</a>
+            <a href="#products">Parceiros</a>
+            <a href="#review">Inscrição</a>
+        </nav>
+    </header>
 
-<main>
-    <section class="home" id="home">
-        <div class="content">
-            <h3>Instituto Aeca</h3>
-            <p>Transformando Vidas pela Educação e pelo Esporte</p>
-            <a href="#" class="btn">Inscreva já</a>
-        </div>
-    </section>
+    <main>
+        <section class="home" id="home">
+            <div class="content">
+                <h3>Instituto Aeca</h3>
+                <p>Transformando Vidas pela Educação e pelo Esporte</p>
+                <a href="#" class="btn">Inscreva já</a>
+            </div>
+        </section>
 
-    <section class="about-section">
-        <div class="about-row">
-            <div class="about-image">
-                <img src="./images/criança.png" alt="Imagem 1">
+        <section class="about-section">
+            <div class="about-row">
+                <div class="about-image">
+                    <img class="special-size" src="./images/foto1.jpeg" alt="Imagem 1">
+                </div>
+                <div class="about-content">
+                    <h2><span>Nossa</span> História</h2>
+                    <p>O tricampeão mundial Ayrton Senna sempre acreditou no potencial das pessoas...</p>
+                </div>
             </div>
-            <div class="about-content">
-                <h2><span>Nossa</span> História</h2>
-                <p>O tricampeão mundial Ayrton Senna sempre acreditou no potencial das pessoas...</p>
 
+            <div class="about-row reverse">
+                <div class="about-image">
+                    <img class="special-size" src="./images/foto2.jpeg" alt="Imagem 2">
+                </div>
+                <div class="about-content">
+                    <h2><span>Nossa</span> Missão</h2>
+                    <p>Transformamos vidas que transformam o mundo ao criar oportunidades...</p>
+                </div>
             </div>
-        </div>
-    
-        <div class="about-row reverse">
-            <div class="about-image">
-                <img src="./images/criança2.png" alt="Imagem 2">
-            </div>
-            <div class="about-content">
-                <h2><span>Nossa</span> Missão</h2>
-                <p>Transformamos vidas que transformam o mundo ao criar oportunidades...</p>
 
+            <div class="about-row">
+                <div class="about-image">
+                    <img class="special-size" src="./images/foto3.jpeg" alt="Imagem 3">
+                </div>
+                <div class="about-content">
+                    <h2><span>Como</span> Impactamos</h2>
+                    <p>Somos um centro de inovação em educação que trabalha em três frentes...</p>
+                </div>
             </div>
-        </div>
-    
-        <div class="about-row">
-            <div class="about-image">
-                <img src="./images/historia.png" alt="Imagem 3">
+        </section>
+
+
+        <section id="criador">
+            <div class="left-content">
+                <img src="./images/larte pb.png" id="larte" alt="Imagem do Criador" class="fadeHmediaQ">
             </div>
-            <div class="about-content">
-                <h2><span>Como</span> Impactamos</h2>
-                <p>Somos um centro de inovação em educação que trabalha em três frentes...</p>
-            </div>
-        </div>
-    </section>
-    
-    <section id="criador">
-        <div class="left-content">
-            <img src="./images/larte pb.png" id="larte" alt="Imagem do Criador" class="fadeHmediaQ">
-        </div>
             <div id="fotoProjeto">
                 <!-- Informações sobre o Criador -->
                 <h2>Laerte Martins</h2>
-                <p>Através do Tênis, o professor Laerte entrou na universidade Puc - campinas aonde ganhou uma bolsa de estudos para cursar Educação Física.</p>
+                <p>Através do Tênis, o professor Laerte entrou na universidade Puc - campinas aonde ganhou uma bolsa de
+                    estudos para cursar Educação Física.</p>
             </div>
-        </div>
-    </section>
-    
-    
+            </div>
+        </section>
 
-    <section class="partners" id="partners">
-        <div class="heading">
-            <h3><span>Parcerias</span></h3>
-        </div>
-        <div class="box-container">
-            <div class="partners-slider">
-                <div class="box">
-                    <img src="images/faat.png" alt="Logo Unifaat">
+        <section class="partners" id="partners">
+            <div class="heading">
+                <h3><span>Parcerias</span></h3>
+            </div>
+            <div class="partners-grid">
+                <!-- Primeira linha: 3 parceiros -->
+                <div class="row">
+                    <div class="box"><img src="images/faat.png" alt="Logo Unifaat"></div>
+                    <div class="box"><img src="images/ptr.png" alt="Logo PTR"></div>
+                    <div class="box"><img src="images/nissan.png" alt="Logo Nissan"></div>
                 </div>
-                <div class="box">
-                    <img src="images/ptr.png" alt="Logo PTR">
-                </div>
-                <div class="box">
-                    <img src="images/nissan.png" alt="Logo Nissan">
-                </div>
-                <div class="box">
-                    <img src="images/Logo_ASA.webp" alt="Logo ASA">
-                </div>
-                <div class="box">
-                    <img src="images/Ocean_Network_Express_logo.svg.png" alt="Logo ASA">
-                </div>
-                <!-- Repetindo as logos para criar o loop -->
-                <div class="box">
-                    <img src="images/faat.png" alt="Logo Unifaat">
-                </div>
-                <div class="box">
-                    <img src="images/ptr.png" alt="Logo PTR">
-                </div>
-                <div class="box">
-                    <img src="images/nissan.png" alt="Logo Nissan">
-                </div>
-                <div class="box">
-                    <img src="images/Logo_ASA.webp" alt="Logo ASA">
-                </div>
-                <div class="box">
-                    <img src="images/Ocean_Network_Express_logo.svg.png" alt="Logo ASA">
+                <!-- Segunda linha: 2 parceiros -->
+                <div class="row">
+                    <div class="box"><img src="images/Logo_ASA.webp" alt="Logo ASA"></div>
+                    <div class="box"><img src="images/Ocean_Network_Express_logo.svg.png" alt="Logo Ocean Network"></div>
                 </div>
             </div>
-        </div>
-    </section>
-    
+        </section>
+        
 
-    <section class="review" id="review">
-        <h1 class="heading">Feedback dos <span>Alunos</span></h1>
-        <div class="box-container">
-            <div class="box">
-                <img src="images/quote-img.png" alt="Citação" class="quote">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi nulla sit libero nemo fuga sequi nobis? Necessitatibus aut laborum, nisi quas eaque laudantium consequuntur iste ex aliquam minus vel? Nemo.</p>
-                <img src="images/pic-1.png" class="user" alt="Foto do aluno">
-                <h3>john deo</h3>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
+
+
+
+        <section class="review" id="review">
+            <h1 class="heading">Feedback dos <span>Alunos</span></h1>
+            <div class="box-container">
+                <div class="box">
+                    <img src="images/quote-img.png" alt="Citação" class="quote">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi nulla sit libero nemo fuga sequi
+                        nobis? Necessitatibus aut laborum, nisi quas eaque laudantium consequuntur iste ex aliquam minus
+                        vel? Nemo.</p>
+                    <img src="images/pic-1.png" class="user" alt="Foto do aluno">
+                    <h3>john deo</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <img src="images/quote-img.png" alt="Citação" class="quote">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi nulla sit libero nemo fuga sequi
+                        nobis? Necessitatibus aut laborum, nisi quas eaque laudantium consequuntur iste ex aliquam minus
+                        vel? Nemo.</p>
+                    <img src="images/pic-2.png" class="user" alt="Foto do aluno">
+                    <h3>john deo</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <img src="images/quote-img.png" alt="Citação" class="quote">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi nulla sit libero nemo fuga sequi
+                        nobis? Necessitatibus aut laborum, nisi quas eaque laudantium consequuntur iste ex aliquam minus
+                        vel? Nemo.</p>
+                    <img src="images/pic-3.png" class="user" alt="Foto do aluno">
+                    <h3>john deo</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
                 </div>
             </div>
+        </section>
 
-            <div class="box">
-                <img src="images/quote-img.png" alt="Citação" class="quote">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi nulla sit libero nemo fuga sequi nobis? Necessitatibus aut laborum, nisi quas eaque laudantium consequuntur iste ex aliquam minus vel? Nemo.</p>
-                <img src="images/pic-2.png" class="user" alt="Foto do aluno">
-                <h3>john deo</h3>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
+        <section class="contact" id="contact">
+            <h1 class="heading"><span>Aonde</span> Estamos</h1>
+            <div class="row">
+                <iframe src="https://www.google.com/maps/embed?pb=..." width="600" height="450" style="border:0;"
+                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                <form action="">
+                    <h3>Inscreva-se</h3>
+                    <div class="inputBox">
+                        <span class="fas fa-user"></span>
+                        <input type="text" placeholder="Nome">
+                    </div>
+                    <div class="inputBox">
+                        <span class="fas fa-envelope"></span>
+                        <input type="email" placeholder="E-mail">
+                    </div>
+                    <div class="inputBox">
+                        <span class="fas fa-phone"></span>
+                        <input type="number" placeholder="Telefone">
+                    </div>
+                    <input type="submit" value="Inscrever" class="btn">
+                </form>
+            </div>
+        </section>
+
+        <section class="blogs" id="blogs">
+            <h1 class="heading">News <span>Letter</span></h1>
+
+            <div class="box-container">
+                <div class="box">
+                    <div class="image">
+                        <img src="images/blog-1.jpeg" alt="Blog 1">
+                    </div>
+                    <div class="content">
+                        <a href="#" class="title">Titulo</a>
+                        <span>by admin / 21st may, 2021</span>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, dicta.</p>
+                        <a href="#" class="btn">Saiba mais</a>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="image">
+                        <img src="images/blog-2.jpeg" alt="Blog 2">
+                    </div>
+                    <div class="content">
+                        <a href="#" class="title">Titulo</a>
+                        <span>by admin / 21st may, 2021</span>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, dicta.</p>
+                        <a href="#" class="btn">Saiba mais</a>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="image">
+                        <img src="" alt="Blog 3">
+                    </div>
+                    <div class="content">
+                        <a href="#" class="title">Titulo</a>
+                        <span>by admin / 21st may, 2021</span>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, dicta.</p>
+                        <a href="#" class="btn">Saiba mais</a>
+                    </div>
                 </div>
             </div>
-            
-            <div class="box">
-                <img src="images/quote-img.png" alt="Citação" class="quote">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi nulla sit libero nemo fuga sequi nobis? Necessitatibus aut laborum, nisi quas eaque laudantium consequuntur iste ex aliquam minus vel? Nemo.</p>
-                <img src="images/pic-3.png" class="user" alt="Foto do aluno">
-                <h3>john deo</h3>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="contact" id="contact">
-        <h1 class="heading"><span>Aonde</span> Estamos</h1>
-        <div class="row">
-            <iframe src="https://www.google.com/maps/embed?pb=..." width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
-            <form action="">
-                <h3>Inscreva-se</h3>
-                <div class="inputBox">
-                    <span class="fas fa-user"></span>
-                    <input type="text" placeholder="Nome">
-                </div>
-                <div class="inputBox">
-                    <span class="fas fa-envelope"></span>
-                    <input type="email" placeholder="E-mail">
-                </div>
-                <div class="inputBox">
-                    <span class="fas fa-phone"></span>
-                    <input type="number" placeholder="Telefone">
-                </div>
-                <input type="submit" value="Inscrever" class="btn">
-            </form>
-        </div>
-    </section>
-
-    <section class="blogs" id="blogs">
-        <h1 class="heading">News <span>Letter</span></h1>
-
-        <div class="box-container">
-            <div class="box">
-                <div class="image">
-                    <img src="images/blog-1.jpeg" alt="Blog 1">
-                </div>
-                <div class="content">
-                    <a href="#" class="title">Titulo</a>
-                    <span>by admin / 21st may, 2021</span>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, dicta.</p>
-                    <a href="#" class="btn">Saiba mais</a>
-                </div>
+        <section class="footer">
+            <div class="share">
+                <a href="#" class="fab fa-facebook-f"></a>
+                <a href="#" class="fab fa-instagram"></a>
+                <a href="#" class="fab fa-linkedin"></a>
             </div>
 
-            <div class="box">
-                <div class="image">
-                    <img src="images/blog-2.jpeg" alt="Blog 2">
-                </div>
-                <div class="content">
-                    <a href="#" class="title">Titulo</a>
-                    <span>by admin / 21st may, 2021</span>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, dicta.</p>
-                    <a href="#" class="btn">Saiba mais</a>
-                </div>
-            </div>
-
-            <div class="box">
-                <div class="image">
-                    <img src="" alt="Blog 3">
-                </div>
-                <div class="content">
-                    <a href="#" class="title">Titulo</a>
-                    <span>by admin / 21st may, 2021</span>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, dicta.</p>
-                    <a href="#" class="btn">Saiba mais</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="footer">
-        <div class="share">
-            <a href="#" class="fab fa-facebook-f"></a>
-            <a href="#" class="fab fa-instagram"></a>
-            <a href="#" class="fab fa-linkedin"></a>
-        </div>
-
-        <div class="credit">| Em Desenvolvimento <span></span> |</div>
-    </section>
-</main>
-
-<!-- custom js file link  -->
-<script src="js/script.js"></script>
+            <div class="credit">| Em Desenvolvimento <span></span> |</div>
+        </section>
+    </main>
 
 </body>
+
 </html>
