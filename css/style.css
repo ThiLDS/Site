@@ -266,84 +266,12 @@ section{
     }
 }
 
-
-
-.about .row{
-    display: flex;
-    align-items: center;
-    background:var(--black);
-    flex-wrap: wrap;
+/* Estilo da seção "about" */
+.about-section {
+    padding: 5rem 7%;
+    background-color: #ffffff; /* Branco puro */
 }
 
-.about .row .image{
-    flex:1 1 45rem;
-}
-
-.about .row .image img{
-    width: 100%;
-}
-.about .row .content{
-    flex:1 1 45rem;
-    padding:2rem;
-}
-
-.about .row .content h3{
-    font-size: 3rem;
-    color:#fff;
-}
-#cort{
-    color:whitesmoke;
-    text-decoration: none;
-
-}
-.about .row .content p{
-    font-size: 1.6rem;
-    color:#ccc;
-    padding:1rem 0;
-    line-height: 1.8;
-}
-
-.menu .box-container{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-    gap:1.5rem;
-}
-
-.menu .box-container .box{
-    padding:5rem;
-    text-align: center;
-    border:var(--border);    
-}
-
-.menu .box-container .box img{
-    height: 10rem;
-}
-
-.menu .box-container .box h3{
-    color: #fff;
-    font-size: 2rem;
-    padding:1rem 0;
-}
-
-.menu .box-container .box .price{
-    color: #fff;
-    font-size: 2.5rem;
-    padding:.5rem 0;
-}
-
-.menu .box-container .box .price span{
-    font-size: 1.5rem;
-    text-decoration: line-through;
-    font-weight: lighter;
-}
-
-.menu .box-container .box:hover{
-    background:#fff;
-}
-
-.menu .box-container .box:hover > *{
-    color:var(--black);
-}
 
 .products .box-container{
     display: grid;
@@ -367,42 +295,6 @@ section{
     margin:.3rem;
 }
 
-.products .box-container .box .icons a:hover{
-    background:var(--main-color);
-}
-
-.products .box-container .box .image{
-    padding: 2.5rem 0;
-}
-
-.products .box-container .box .image img{
-    height: 25rem;
-}
-
-.products .box-container .box .content h3{
-    color:#fff;
-    font-size: 2.5rem;
-}
-
-.products .box-container .box .content .stars{
-    padding: 1.5rem;
-}
-
-.products .box-container .box .content .stars i{
-    font-size: 1.7rem;
-    color: var(--main-color);
-}
-
-.products .box-container .box .content .price{
-    color:#fff;
-    font-size: 2.5rem;
-}
-
-.products .box-container .box .content .price span{
-    text-decoration: line-through;
-    font-weight: lighter;
-    font-size: 1.5rem;
-}
 
 .review .box-container{
     display: grid;
@@ -729,54 +621,95 @@ section{
 
 
 /* Estilização da seção Parceiros */
-.carousel-container {
+/* Estilo da seção de parceiros */
+.partners {
+    padding: 5rem 7%;
+    background-color: #f7f7f7; /* Cor de fundo neutra e clara */
+}
+
+.partners .heading h3 {
+    color: #333; /* Cor suave para o título */
+    font-size: 3.5rem;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    margin-bottom: 2rem;
     position: relative;
-    width: 80%;
-    max-width: 800px;
-    margin: 0 auto;
-    overflow: hidden;
 }
 
-.carousel {
-    display: flex;
-    transition: transform 0.5s ease-in-out; /* Transição suave entre as imagens */
-}
-
-.carousel .box {
-    min-width: 100%; /* Faz cada box ocupar 100% da largura */
-    box-sizing: border-box;
-}
-
-.carousel img {
-    width: 100%; /* Faz a imagem ocupar toda a largura do box */
-    height: auto;
-}
-
-/* Estilos para os botões de navegação */
-button {
+.partners .heading h3::after {
+    content: '';
     position: absolute;
-    top: 50%;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    font-size: 24px;
-    padding: 10px;
-    cursor: pointer;
-    z-index: 10;
-    transform: translateY(-50%);
+    width: 50px;
+    height: 3px;
+    background-color: var(--primary-color); /* Cor personalizada */
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
-#prev {
-    left: 10px;
+.partners .box-container {
+    overflow: hidden; /* Esconde o conteúdo fora da área visível */
+    width: 100%; /* Garante que o contêiner ocupe toda a largura */
 }
 
-#next {
-    right: 10px;
+.partners .partners-slider {
+    display: flex;
+    width: max-content; /* Faz com que os elementos fiquem em linha */
+    animation: slide 30s linear infinite; /* Animação contínua */
 }
 
-button:hover {
-    background-color: rgba(0, 0, 0, 0.7);
+.partners .box {
+    background: #fff; /* Fundo branco para destacar as imagens */
+    padding: 2rem;
+    text-align: center;
+    border-radius: 1rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra mais suave */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 2rem; /* Espaço entre as logos */
+    flex-shrink: 0; /* Impede que as logos encolham */
+    height: 12rem; /* Tamanho fixo para as logos */
 }
+
+.partners .box img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* Assegura que a imagem se ajuste corretamente dentro da caixa */
+}
+
+/* Animação do deslizamento horizontal */
+@keyframes slide {
+    0% {
+        transform: translateX(0); /* Começa do início */
+    }
+    100% {
+        transform: translateX(-50%); /* Move as imagens para a esquerda até metade do tamanho total */
+    }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .partners .box-container {
+        padding: 0 10%;
+    }
+    .partners .partners-slider {
+        animation-duration: 40s; /* Um pouco mais lento em telas menores */
+    }
+}
+
+@media (max-width: 480px) {
+    .partners .heading h3 {
+        font-size: 2.5rem; /* Reduzindo o tamanho do título em dispositivos pequenos */
+    }
+    .partners .box {
+        padding: 1rem;
+        height: 10rem; /* Ajustando altura das boxes em telas menores */
+    }
+}
+
 
 
 :root {
@@ -831,40 +764,45 @@ body {
     flex-direction: row-reverse; /* Reverte a ordem para alternar */
 }
 
-.about-image img {
+/* Aplica borda superior direita arredondada nas imagens da primeira e última seção */
+.about-row:first-of-type .about-image img,
+.about-row:last-of-type .about-image img {
+    border-top-right-radius: 120px; /* Arredondamento mais forte na borda superior direita */
+    border-top-left-radius: 0; /* Mantém a borda superior esquerda quadrada */
+    border-bottom-left-radius: 0; /* Mantém a borda inferior esquerda quadrada */
+    border-bottom-right-radius: 0; /* Mantém a borda inferior direita quadrada */
+}
+
+/* Aplica borda superior esquerda arredondada na imagem do meio */
+.about-row:nth-of-type(2) .about-image img {
+    border-top-left-radius: 120px; /* Arredondamento forte na borda superior esquerda */
+    border-top-right-radius: 0; /* Mantém a borda superior direita quadrada */
+    border-bottom-left-radius: 0; /* Mantém a borda inferior esquerda quadrada */
+    border-bottom-right-radius: 0; /* Mantém a borda inferior direita quadrada */
+}
+
+/* Ajustes gerais para as imagens */
+.about-row .about-image img {
     max-width: 120%; /* Aumenta a largura das imagens */
-    height: auto;
-    border-radius: 20px;
-    box-shadow: 0 0 25px rgba(0, 0, 0, 0.2); /* Aumenta o efeito de sombra */
+    height: auto; /* Ajusta a altura para preservar a proporção */
     margin: 0;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease; /* Transição suave no hover */
     object-fit: cover; /* Ajusta a imagem para cobrir o espaço */
-    max-height: 650px; /* Aumenta o tamanho máximo da imagem */
+    max-height: 650px; /* Define a altura máxima das imagens */
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.2); /* Adiciona um leve efeito de sombra */
 }
 
-/* Para aumentar as imagens ainda mais em telas maiores */
+/* Para telas maiores */
 @media (min-width: 1200px) {
-    .about-image img {
-        max-width: 130%; /* Aumenta ainda mais as imagens */
-        max-height: 750px; /* Aumenta a altura máxima das imagens */
+    .about-row .about-image img {
+        max-width: 130%; /* Aumenta a largura das imagens em telas grandes */
+        max-height: 750px; /* Define uma altura máxima maior */
     }
 }
 
-.about-content {
-    max-width: 1000px; /* Aumenta a largura máxima do conteúdo */
-    text-align: center;
-    animation: fadeInText 1s 0.5s forwards; /* Animação do texto */
-}
-
-@keyframes fadeInText {
-    0% {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
+/* Adicionando hover para realce */
+.about-row .about-image img:hover {
+    transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
 }
 
 /* Títulos */

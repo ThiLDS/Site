@@ -44,35 +44,3 @@ const swiper = new Swiper('.swiper', {
       el: '.swiper-scrollbar',
     },
   });
-
-
-document.addEventListener("DOMContentLoaded", function () {
-    const carousel = document.querySelector('.partners .carousel');
-    const boxes = document.querySelectorAll('.partners .carousel .box');
-    let currentIndex = 0;
-
-    
-});
-
-
-let currentIndex = 0; // Índice da imagem atual
-
-    // Função para mover o carrossel
-    function moveCarousel(direction) {
-        const carousel = document.querySelector('.carousel');
-        const totalImages = carousel.children.length;
-
-        // Atualiza o índice atual dependendo da direção
-        currentIndex += direction;
-
-        // Verifica se o índice está dentro dos limites
-        if (currentIndex >= totalImages) {
-            currentIndex = 0; // Vai para o primeiro item
-        } else if (currentIndex < 0) {
-            currentIndex = totalImages - 1; // Vai para o último item
-        }
-
-        // Move o carrossel para o índice atual
-        const offset = -currentIndex * 100; // Deslocamento em % (100% por imagem)
-        carousel.style.transform = `translateX(${offset}%)`;
-    }
