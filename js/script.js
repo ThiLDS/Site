@@ -19,20 +19,6 @@ menuBtn.onclick = () => {
     searchForm.classList.remove('active');
     cartItem.classList.remove('active');
 };
-
-// Toggle da barra de pesquisa
-searchBtn.onclick = () => {
-    searchForm.classList.toggle('active');
-    navbar.classList.remove('active');
-    cartItem.classList.remove('active');
-};
-
-// Toggle do carrinho de compras
-cartBtn.onclick = () => {
-    cartItem.classList.toggle('active');
-    navbar.classList.remove('active');
-    searchForm.classList.remove('active');
-};
-
 // Fechar menus ao rolar a página
 window.onscroll = closeMenusOnScroll;
+
