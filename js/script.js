@@ -43,8 +43,4 @@ const swiper = new Swiper('.swiper', {
     scrollbar: {
       el: '.swiper-scrollbar',
     },
-<<<<<<< HEAD
   });
-=======
-  });
->>>>>>> 49e1f275706c3cac5bb33ae0727d751d0b6237c8
