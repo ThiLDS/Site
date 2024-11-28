@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto:wght@300&display=swap" rel="stylesheet">
 
+    
+
 </head>
 <body>
 
@@ -31,7 +33,7 @@
         <div class="content">
             <h3>Instituto Aeca</h3>
             <p>Transformando Vidas pela Educação e pelo Esporte</p>
-            <a href="#" class="btn">Inscreva já</a>
+            <a href="#" class="btn">Inscreva-se</a>
         </div>
     </section>
 
@@ -82,26 +84,59 @@
     </section>
     
     
+    <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parcerias</title>
+    <style>
+        /* CSS para o botão */
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+        }
 
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
     <section class="partners" id="partners">
         <div class="heading">
             <h3><span>Parcerias</span></h3>
         </div>
-        <div class="box-container">
-            <div class="box">
-                <img src="images/unifaat.png" alt="Logo Unifaat">
-            </div>
-            <div class="box">
-                <img src="images/ptr.png" alt="Logo PTR">
-            </div>
-            <div class="box">
-                <img src="images/nissan logo.jpeg" alt="Logo Nissan">
-            </div>
-            <div class="box">
-                <img src="images/Logo_ASA.webp" alt="Logo ASA">
+        <div class="carousel-container">
+            <div class="carousel">
+                <div class="box">
+                    <img src="images/unifaat.png" alt="Logo Unifaat">
+                </div>
+                <div class="box">
+                    <img src="images/ptr.png" alt="Logo PTR">
+                </div>
+                <div class="box">
+                    <img src="images/nissan logo.jpeg" alt="Logo Nissan">
+                </div>
+                <div class="box">
+                    <img src="images/Logo_ASA.webp" alt="Logo ASA">
+                </div>
             </div>
         </div>
-    </section>
+        <!-- Controles de navegação -->
+        <button id="prev" onclick="moveCarousel(-1)">&#10094;</button>
+        <button id="next" onclick="moveCarousel(1)">&#10095;</button>
+    </section>    
+    
+</body>
+</html>
+
+        
 
     <section class="review" id="review">
         <h1 class="heading">Feedback dos <span>Alunos</span></h1>
@@ -227,8 +262,8 @@
     </section>
 </main>
 
+  
 <!-- custom js file link  -->
-<script src="js/script.js"></script>
-
+<script src="./js/script.js"></script>
 </body>
 </html>

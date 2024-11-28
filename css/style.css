@@ -231,20 +231,24 @@ section{
 /* Botão */
 .home .content a.btn {
     display: inline-block;
-    padding: 1rem 2rem;
-    background-color: #006400; /* Verde */
+    padding: 1.2rem 3rem; /* Aumenta o tamanho do botão */
+    background-color: #4CAF50; /* Verde mais claro */
     color: white;
     text-decoration: none;
-    font-size: 1.5rem;
-    border-radius: 30px;
+    font-size: 1.8rem; /* Aumenta o tamanho da fonte */
+    border-radius: 50px; /* Botão mais arredondado */
     font-weight: bold;
     margin-top: 2rem;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Adiciona transição para o efeito de "escala" */
 }
 
+/* Hover */
 .home .content a.btn:hover {
-    background-color: #004d00; /* Tom mais escuro de verde */
+    background-color: #45a049; /* Verde um pouco mais claro que o original */
+    transform: scale(1.05); /* Efeito de zoom suave no hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Adiciona sombra para dar mais destaque */
 }
+
 
 /* Responsividade para telas pequenas */
 @media (max-width: 768px) {
@@ -725,39 +729,53 @@ section{
 
 
 /* Estilização da seção Parceiros */
-.partners {
-    padding: 5rem 7%;
-    background: var(--black);
+.carousel-container {
+    position: relative;
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
 }
 
-.partners .heading h3 {
-    color: #fff;
-    font-size: 3.5rem;
-    text-align: center;
-    padding-bottom: 2rem;
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Transição suave entre as imagens */
 }
 
-.partners .box-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); /* Responsivo para dispositivos menores */
-    gap: 2rem;
-    justify-items: center;
+.carousel .box {
+    min-width: 100%; /* Faz cada box ocupar 100% da largura */
+    box-sizing: border-box;
 }
 
-.partners .box img {
-    background: #fff;
-    padding: 2rem;
-    text-align: center;
-    border-radius: 1rem;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
-    max-width: 100%;
-    max-height: 10rem;
-    object-fit: contain;
+.carousel img {
+    width: 100%; /* Faz a imagem ocupar toda a largura do box */
+    height: auto;
 }
 
-.partners .box:hover {
-    transform: scale(1.05);
+/* Estilos para os botões de navegação */
+button {
+    position: absolute;
+    top: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+    transform: translateY(-50%);
+}
+
+#prev {
+    left: 10px;
+}
+
+#next {
+    right: 10px;
+}
+
+button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 
