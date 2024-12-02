@@ -567,8 +567,8 @@ section {
 }
 
 .ods-card {
-    width: 300px;
-    height: 450px;
+    width: 150px;
+    height: 150px;
     perspective: 1000px; /* Dá profundidade para o efeito de flip */
     position: relative;
 }
@@ -605,7 +605,7 @@ section {
 .ods-card .card-back {
     background-color: #444;
     color: white;
-    padding: 20px;
+    padding: 15px; /* Reduzido o padding para economizar espaço */
     transform: rotateY(180deg); /* Começa virado */
     display: flex;
     flex-direction: column;
@@ -622,12 +622,12 @@ section {
 }
 
 .ods-card .card-back h3 {
-    font-size: 1.8rem;
-    margin-bottom: 10px;
+    font-size: 1.4rem; /* Reduzi o tamanho da fonte do título */
+    margin-bottom: 8px; /* Diminui a margem inferior */
 }
 
 .ods-card .card-back p {
-    font-size: 1.2rem;
+    font-size: 1rem; /* Reduzi o tamanho da fonte do parágrafo */
 }
 
 /* Responsividade - Ajustes para telas menores */
