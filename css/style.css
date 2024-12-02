@@ -357,25 +357,25 @@ section {
 
 /* Feedback Section */
 #feedback {
-    background-color: #f8f9fa;
-    padding: 100px 40px; /* Espaçamento maior */
+    background-color: #e8f5e9; /* Verde suave para o fundo */
+    padding: 120px 40px; /* Espaçamento confortável */
     font-family: 'Poppins', sans-serif; /* Substitua pela fonte do site */
     text-align: center;
 }
 
 .feedback-header h2 {
-    font-size: 3.5rem; /* Tamanho do título aumentado */
-    color: #007bff;
-    margin-bottom: 20px;
+    font-size: 5rem; /* Título ainda maior */
+    color: #61e00d; /* Verde escuro para o título */
+    margin-bottom: 30px;
     font-weight: bold;
     text-transform: uppercase;
 }
 
 .feedback-header p {
-    font-size: 1.5rem; /* Texto descritivo maior */
-    color: #666;
-    margin-bottom: 50px;
-    max-width: 800px;
+    font-size: 2.2rem; /* Subtítulo maior */
+    color: #000000; /* Verde médio */
+    margin-bottom: 60px;
+    max-width: 900px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -384,15 +384,15 @@ section {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 40px; /* Maior espaçamento entre os cards */
+    gap: 50px; /* Espaçamento maior entre os cards */
 }
 
 .feedback-card {
-    background: #fff;
-    width: 500px; /* Ampliado para maior destaque */
-    padding: 50px; /* Mais espaço interno nos cards */
-    border-radius: 20px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    background: #ffffff;
+    width: 600px; /* Mais largo para acompanhar o aumento de fonte */
+    padding: 70px; /* Mais espaço interno */
+    border-radius: 25px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -401,35 +401,35 @@ section {
 }
 
 .feedback-card:hover {
-    transform: scale(1.1); /* Destaque maior ao hover */
+    transform: scale(1.1); /* Destaque ao hover */
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
 }
 
 .feedback-photo {
-    width: 150px; /* Fotos ampliadas */
-    height: 150px;
+    width: 200px; /* Fotos ainda maiores */
+    height: 200px;
     border-radius: 50%;
     object-fit: cover;
-    border: 5px solid #007bff; /* Borda mais espessa */
-    margin-bottom: 20px;
+    border: 6px solid #000000; /* Borda verde */
+    margin-bottom: 30px;
 }
 
 .feedback-content h3 {
-    font-size: 1.8rem; /* Nome do autor maior */
-    color: #333;
-    margin: 15px 0 10px;
+    font-size: 2.8rem; /* Nome do autor maior */
+    color: #61e00d;
+    margin: 20px 0 15px;
 }
 
 .feedback-stars {
-    font-size: 2rem; /* Estrelas maiores */
-    color: #ffd700;
-    margin: 10px 0 20px;
+    font-size: 3rem; /* Estrelas maiores */
+    color: #ffeb3b;
+    margin: 15px 0 30px;
 }
 
 .feedback-content p {
-    font-size: 1.3rem; /* Texto do feedback maior */
+    font-size: 1.8rem; /* Feedback maior */
     color: #444;
-    line-height: 1.8;
+    line-height: 2; /* Maior espaçamento entre linhas */
 }
 
 
@@ -437,54 +437,92 @@ section {
     margin-bottom: 29px;
 }
 
-.contact .row {
-    display: flex;
-    background: var(--black);
-    flex-wrap: wrap;
-    gap: 1rem;
-}
-
-.contact .row .map {
-    flex: 1 1 45rem;
-    width: 100%;
-    object-fit: cover;
-}
-
-.contact .row form {
-    flex: 1 1 45rem;
-    padding: 5rem 2rem;
+.contact {
+    background-color: #f7f7f7; /* Fundo claro */
+    padding: 80px 20px;
     text-align: center;
 }
 
-.contact .row form h3 {
-    text-transform: uppercase;
-    font-size: 3.5rem;
-    color: #fff;
+.contact .heading {
+    font-size: 4.5rem;
+    margin-bottom: 40px;
+    color: #61e00d; /* Verde claro */
 }
 
-.contact .row form .inputBox {
-    display: flex;
+.contact .heading .black {
+    color: #000; /* Palavra "Estamos" em preto */
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    max-width: 1300px;
+    margin: 0 auto;
     align-items: center;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    background: var(--bg);
-    border: var(--border);
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
-.contact .row form .inputBox span {
-    color: #fff;
+.map-info {
+    padding: 20px;
+    background-color: #e8f5e9; /* Fundo verde suave */
+    border-radius: 20px;
+    text-align: center; /* Centraliza o texto */
+}
+
+.map-info h2 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    color: #61e00d; /* Verde claro */
+}
+
+.map-info p {
     font-size: 2rem;
-    padding-left: 2rem;
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.6;
 }
 
-.contact .row form .inputBox input {
-    width: 100%;
-    padding: 2rem;
-    font-size: 1.7rem;
-    color: #fff;
-    text-transform: none;
-    background: none;
+.map-info .map-address p {
+    font-size: 2.2rem;
+    margin: 10px 0;
 }
+
+.map-info .map-address p strong {
+    color: #000000; /* Verde claro */
+}
+
+.map-frame {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.map-frame iframe {
+    width: 100%;
+    height: 400px; /* Altura do mapa */
+    border: none;
+    border-radius: 20px;
+}
+
+/* Efeito de hover no mapa */
+.map-frame:hover {
+    transform: scale(1.02); /* Leve aumento ao passar o mouse */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); /* Sombra mais intensa no hover */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
+
 
 .footer {
     background: var(--black);
@@ -756,7 +794,7 @@ section {
     /* Cor principal */
     text-transform: uppercase;
     letter-spacing: 0.3rem;
-    text-shadow: 0 0 10px rgba(97, 224, 13, 0.8), 0 0 20px rgba(97, 224, 13, 0.6);
+    text-shadow: 0 0 10px #61e00dcc, 0 0 20px rgba(97, 224, 13, 0.6);
     /* Brilho */
     animation: glow 2s infinite alternate;
     /* Efeito de brilho contínuo */
