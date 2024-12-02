@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscrição Instituto AECA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styleinscricao.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="form-title">Inscreva-se no Instituto AECA</h1>
+        <p class="form-description">Preencha os dados abaixo para se inscrever e participar dos programas do Instituto AECA. Vamos ajudar você a transformar sua vida!</p>
+        
+        <form id="inscricao-form">
+            <div class="form-group">
+                <label for="nome">Nome Completo:</label>
+                <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+            </div>
+
+            <div class="form-group">
+                <label for="telefone">Telefone:</label>
+                <input type="tel" id="telefone" name="telefone" placeholder="Digite seu telefone" required>
+            </div>
+
+            <div class="form-group">
+                <label for="curso">Curso de Interesse:</label>
+                <select id="curso" name="curso" required>
+                    <option value="">Selecione um curso</option>
+                    <option value="Futebol">Futebol</option>
+                    <option value="Tênis">Tênis</option>
+                    <option value="Voleibol">Voleibol</option>
+                    <option value="Basquete">Basquete</option>
+                    <option value="Beach Tênis">Beach Tênis</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="idade">Você é maior de idade?</label>
+                <select id="idade" name="idade" required>
+                    <option value="">Selecione sua faixa etária</option>
+                    <option value="maior">+18 (Maior de idade)</option>
+                    <option value="menor">-18 (Menor de idade)</option>
+                </select>
+            </div>
+
+            <!-- Campo de telefone do responsável (oculto por padrão) -->
+            <div class="form-group" id="telefone-responsavel-group" style="display: none;">
+                <label for="telefone-responsavel">Telefone do Responsável:</label>
+                <input type="tel" id="telefone-responsavel" name="telefone-responsavel" placeholder="Digite o telefone do responsável">
+            </div>
+
+            <button type="submit" class="btn-submit">Enviar Inscrição</button>
+        </form>
+
+        <!-- Caixa de confirmação que será exibida após o envio do formulário -->
+        <div id="confirmation-box" class="confirmation-box" style="display: none;">
+            <p id="confirmation-message"></p>
+        </div>
+    </div>
+
+    <script src="incricao.js"></script>
+</body>
+</html>

@@ -1,0 +1,153 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f7f7f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+    background: linear-gradient(135deg, #6e7a82, #61e00d);
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Estilo para o título */
+.form-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 48px; /* Tamanho maior para destaque */
+    font-weight: 700; /* Negrito */
+    text-align: center; /* Centralizando */
+    color: #61e00d; /* Cor verde para manter a identidade visual */
+    margin-bottom: 20px;
+    padding: 10px;
+    
+    /* Aplicando a animação de zoom contínuo */
+    animation: zoom-in-out 3s ease-in-out infinite; /* Animando com loop infinito */
+}
+
+/* Definindo a animação @keyframes */
+@keyframes zoom-in-out {
+    0% {
+        transform: scale(1); /* Início no tamanho original */
+    }
+    50% {
+        transform: scale(1.1); /* Zoom em 10% no meio da animação */
+    }
+    100% {
+        transform: scale(1); /* Volta ao tamanho original no final */
+    }
+}
+
+
+.form-description {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #666;
+    line-height: 1.5;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+label {
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: #333;
+    display: block;
+}
+
+input, select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    margin-top: 5px;
+    transition: all 0.3s ease-in-out;
+    outline: none;
+}
+
+input:focus, select:focus {
+    border-color: #61e00d;
+    box-shadow: 0 0 8px rgba(97, 224, 13, 0.5);
+}
+
+button {
+    background-color: #61e00d;
+    color: white;
+    font-size: 18px;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #4caf50;
+}
+
+.confirmation-box {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #e0ffe0;
+    border: 2px solid #4CAF50;
+    border-radius: 8px;
+    color: #4CAF50;
+    font-size: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.confirmation-box.error {
+    background-color: #ffcccc;
+    border-color: #f44336;
+    color: #f44336;
+}
+
+/* Animação para a entrada do formulário */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsividade para telas pequenas */
+@media screen and (max-width: 600px) {
+    .container {
+        padding: 20px;
+        width: 90%;
+    }
+
+    .form-title {
+        font-size: 30px;
+    }
+
+    .form-description {
+        font-size: 16px;
+    }
+}
