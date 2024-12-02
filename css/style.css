@@ -44,7 +44,7 @@ section {
 
 .heading {
     text-align: center;
-    color: #fff;
+    color: black;
     text-transform: uppercase;
     padding-bottom: 3.5rem;
     font-size: 4rem;
@@ -386,6 +386,10 @@ section {
     color: var(--main-color);
 }
 
+.row {
+    margin-bottom: 29px;
+}
+
 .contact .row {
     display: flex;
     background: var(--black);
@@ -652,7 +656,7 @@ section {
 
 #fotoProjeto h2 {
     font-size: 2.5rem;
-    color: #fff;
+    color: black;
     margin-bottom: 1rem;
 }
 
