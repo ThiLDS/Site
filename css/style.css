@@ -349,42 +349,89 @@ section {
 }
 
 
-.review .box-container {
+.box-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-    gap: 1.5rem;
+    gap: 1.5remreview;
 }
 
-.review .box-container .box {
-    border: var(--border);
+/* Feedback Section */
+#feedback {
+    background-color: #f8f9fa;
+    padding: 100px 40px; /* Espaçamento maior */
+    font-family: 'Poppins', sans-serif; /* Substitua pela fonte do site */
     text-align: center;
-    padding: 3rem 2rem;
 }
 
-.review .box-container .box p {
-    font-size: 1.5rem;
-    line-height: 1.8;
-    color: #ccc;
-    padding: 2rem 0;
+.feedback-header h2 {
+    font-size: 3.5rem; /* Tamanho do título aumentado */
+    color: #007bff;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
-.review .box-container .box .user {
-    height: 7rem;
-    width: 7rem;
+.feedback-header p {
+    font-size: 1.5rem; /* Texto descritivo maior */
+    color: #666;
+    margin-bottom: 50px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.feedback-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px; /* Maior espaçamento entre os cards */
+}
+
+.feedback-card {
+    background: #fff;
+    width: 500px; /* Ampliado para maior destaque */
+    padding: 50px; /* Mais espaço interno nos cards */
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feedback-card:hover {
+    transform: scale(1.1); /* Destaque maior ao hover */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.feedback-photo {
+    width: 150px; /* Fotos ampliadas */
+    height: 150px;
     border-radius: 50%;
     object-fit: cover;
+    border: 5px solid #007bff; /* Borda mais espessa */
+    margin-bottom: 20px;
 }
 
-.review .box-container .box h3 {
-    padding: 1rem 0;
-    font-size: 2rem;
-    color: #fff;
+.feedback-content h3 {
+    font-size: 1.8rem; /* Nome do autor maior */
+    color: #333;
+    margin: 15px 0 10px;
 }
 
-.review .box-container .box .stars i {
-    font-size: 1.5rem;
-    color: var(--main-color);
+.feedback-stars {
+    font-size: 2rem; /* Estrelas maiores */
+    color: #ffd700;
+    margin: 10px 0 20px;
 }
+
+.feedback-content p {
+    font-size: 1.3rem; /* Texto do feedback maior */
+    color: #444;
+    line-height: 1.8;
+}
+
 
 .row {
     margin-bottom: 29px;
