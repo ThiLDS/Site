@@ -410,7 +410,6 @@ section {
     height: 200px;
     border-radius: 50%;
     object-fit: cover;
-    border: 6px solid #000000; /* Borda verde */
     margin-bottom: 30px;
 }
 
@@ -576,7 +575,7 @@ section {
 }
 
 .footer-rights p {
-    margin: 0;
+    margin-right: 950px;
 }
 
 .footer-rights a {
@@ -591,14 +590,14 @@ section {
 
 /* Redes sociais */
 .footer-social {
-    display: flex;
     align-items: center;
     gap: 20px; /* Espaçamento entre os ícones */
 }
 
 .footer-social h4 {
-    font-size: 1.2rem;
-    color: var(--main-color);
+    margin-top: 25px;
+    font-size: 1.5rem;
+    color: white;
 }
 
 .footer-social a img {
@@ -612,6 +611,10 @@ section {
     filter: brightness(1.5);
 }
 
+#face-img{
+    margin-right: 4px;
+}
+
 /* Cards de ODS */
 .ods-cards {
     display: flex;
@@ -619,14 +622,11 @@ section {
 }
 
 .ods-card {
-    background-color: #333;
-    border-radius: 10px;
     width: 120px;
     height: 120px;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
