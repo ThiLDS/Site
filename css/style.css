@@ -410,7 +410,6 @@ section {
     height: 200px;
     border-radius: 50%;
     object-fit: cover;
-    border: 6px solid #000000; /* Borda verde */
     margin-bottom: 30px;
 }
 
