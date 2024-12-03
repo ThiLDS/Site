@@ -746,47 +746,57 @@ section {
 
 /* Estilo da seção Criador do Projeto */
 #criador {
-    display: grid;
-    grid-template-columns: 5fr 8fr;
-    /* Define o layout */
-    gap: 25px;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
+    width: 100vw; /* Ocupar toda a largura da tela */
+    height: auto;
     margin: 0 auto;
-    background: linear-gradient(135deg, #000000, #808080);
-    /* Fundo gradiente preto e cinza */
+    background: #ffffff; /* Fundo branco para a área do título */
     color: white;
-    overflow: hidden;
+    padding: 0;
 }
 
+/* Faixa branca para o título "Idealizador" */
+.titulo-idealizador {
+    background-color: #ffffff;
+    padding: 20px 0;
+    width: 100vw; /* Garantir que o título ocupe a largura total da tela */
+    text-align: center;
+    position: relative;
+    z-index: 10;
+    margin-bottom: 10px; /* Espaço pequeno entre o título e o conteúdo */
+}
+
+.titulo-idealizador h1 {
+    font-size: 4.5rem;
+    /* Aumenta o tamanho da fonte */
+    font-weight: bold;
+    color: var(--main-color);
+    /* Cor principal */
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+}
+
+/* Container para imagem e texto sobre Laerte */
+.criador-content {
+    display: flex;
+    align-items: center;
+    width: 100vw; /* Ocupar toda a largura da tela */
+    height: 100vh; /* Preenche toda a altura da tela */
+    margin: 0; /* Remove margens extras */
+    padding: 0; /* Ajuste o padding para não ter margem ao redor */
+    background: linear-gradient(135deg, #000000, #808080); /* Fundo gradiente preto e cinza */
+}
+
+/* Foto do Criador com efeito de bordas ofuscadas */
 #larte {
-    width: 90%;
-    /* Aumenta a largura da imagem */
-    max-width: 450px;
+    width: 35vw;
     height: auto;
     object-fit: contain;
     object-position: center;
-    margin: 0 auto;
     opacity: 0;
-    /* Inicialmente invisível */
-    animation: fadeInImage 2s ease-in-out forwards;
-    /* Efeito de fade-in */
+    animation: fadeInImage 2s ease-in-out forwards, zoomIn 1s ease-in-out forwards;
     filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.5));
-    /* Adiciona sombra */
-
-    /* Efeito de bordas ofuscadas */
-    -webkit-mask-image: linear-gradient(to right,
-            rgba(0, 0, 0, 0),
-            rgba(0, 0, 0, 1) 40%,
-            rgba(0, 0, 0, 1) 60%,
-            rgba(0, 0, 0, 0) 100%);
-    mask-image: linear-gradient(to right,
-            rgba(0, 0, 0, 0),
-            rgba(0, 0, 0, 1) 40%,
-            rgba(0, 0, 0, 1) 60%,
-            rgba(0, 0, 0, 0) 100%);
+    -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1) 40%, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0) 100%);
+    mask-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1) 40%, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0) 100%);
     -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
 }
@@ -796,64 +806,81 @@ section {
     0% {
         opacity: 0;
         transform: scale(0.8);
-        /* Leve redução inicial */
     }
 
     100% {
         opacity: 1;
         transform: scale(1);
-        /* Tamanho original */
     }
 }
 
+/* Animação de "zoom in" para a foto */
+@keyframes zoomIn {
+    0% {
+        transform: scale(0.8);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Informações sobre o Criador (Texto à direita da imagem) */
 #fotoProjeto {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
-    padding: 0 2rem;
+    align-items: center; /* Alinha o texto ao centro */
+    width: 40%; /* Ajusta a largura do texto à direita da imagem */
     animation: fadeInText 2s ease-in-out forwards;
-    /* Fade para o texto */
+    text-align: center; /* Centraliza o texto */
 }
 
 /* Animação de fade para o texto */
 @keyframes fadeInText {
     0% {
         opacity: 0;
-        transform: translateX(-20px);
-        /* Começa deslocado */
+        transform: translateX(20px); /* Inicia movendo o texto para a direita */
     }
-
     100% {
         opacity: 1;
-        transform: translateX(0);
+        transform: translateX(0); /* Termina no centro */
     }
 }
 
 #fotoProjeto h2 {
-    font-size: 2.5rem;
-    color: black;
+    font-size: 3.5rem;
+    color: #32CD32; /* Cor sólida verde para destaque */
     margin-bottom: 1rem;
+    text-align: center; /* Centraliza o título */
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5); /* Sombra para dar destaque e profundidade */
+    padding: 5px 0; /* Adiciona um pequeno padding para não ficar colado nas bordas */
 }
 
+/* Estilo do parágrafo sobre o Laerte */
 #fotoProjeto p {
     font-size: 1.5rem;
     color: #ccc;
     line-height: 1.8;
     max-width: 600px;
+    text-align: center; /* Centraliza o parágrafo */
+    margin-top: 1rem;
+    animation: fadeInText 2s ease-in-out forwards;
 }
 
 /* Responsividade */
 @media (max-width: 768px) {
     #criador {
-        grid-template-columns: 1fr;
-        /* Reorganiza layout */
+        padding-top: 30px;
+    }
+
+    .criador-content {
+        flex-direction: column;
         gap: 15px;
         padding: 1rem;
     }
 
     #larte {
-        width: 100%;
+        width: 80%;
         max-width: 300px;
     }
 
@@ -864,7 +891,12 @@ section {
     #fotoProjeto p {
         font-size: 1.2rem;
     }
+
+    .titulo-idealizador {
+        font-size: 2rem;
+    }
 }
+
 
 
 /* Estilização da seção Parceiros */
