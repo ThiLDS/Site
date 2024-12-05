@@ -360,6 +360,7 @@ nav {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
     gap: 50px;
     /* Espaçamento maior entre os cards */
 }
@@ -424,7 +425,7 @@ nav {
 /* Estilo da seção de contato */
 .contact {
     background-color: #f7f7f7;
-    padding: 80px 20px;
+    padding: 80px 0px 0px;
     text-align: center;
 }
 
@@ -644,15 +645,14 @@ nav {
 
 /* Faixa branca para o título "Idealizador" */
 .titulo-idealizador {
-    background-color: #ffffff;
     padding: 20px 0;
-    width: 100vw;
     /* Garantir que o título ocupe a largura total da tela */
     text-align: center;
     position: relative;
     z-index: 10;
     margin-bottom: 10px;
     /* Espaço pequeno entre o título e o conteúdo */
+
 }
 
 .titulo-idealizador h1 {
@@ -669,10 +669,9 @@ nav {
 .criador-content {
     display: flex;
     align-items: center;
-    width: 100vw;
+    width: 100%;
     /* Ocupar toda a largura da tela */
-    height: 100vh;
-    /* Preenche toda a altura da tela */
+        /* Preenche toda a altura da tela */
     margin: 0;
     /* Remove margens extras */
     padding: 0;
@@ -680,15 +679,15 @@ nav {
     background: linear-gradient(135deg, #000000, #808080);
     /* Fundo gradiente preto e cinza */
 }
-
+.left-content{
+    width: 50%;
+}
 /* Foto do Criador com efeito de bordas ofuscadas */
 #larte {
-    width: 35vw;
-    height: auto;
+    height: 100px;
     object-fit: contain;
     object-position: center;
-    opacity: 0;
-    animation: fadeInImage 2s ease-in-out forwards, zoomIn 1s ease-in-out forwards;
+    opacity: 1;
     filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.5));
     -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1) 40%, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0) 100%);
     mask-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1) 40%, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0) 100%);
@@ -726,12 +725,38 @@ nav {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-bottom: 5vh;
+    
     /* Alinha o texto ao centro */
     width: 40%;
     /* Ajusta a largura do texto à direita da imagem */
     animation: fadeInText 2s ease-in-out forwards;
     text-align: center;
     /* Centraliza o texto */
+
+    /* textos */
+    p {
+        font-size: 2rem;
+        color: #ccc;
+        line-height: 1.8;
+        max-width: 600px;
+        text-align: center;
+        /* Centraliza o parágrafo */
+        margin-top: 1rem;
+        animation: fadeInText 2s ease-in-out forwards;
+    }
+    h2 {
+        font-size: 4rem;
+        color: #32CD32;
+        /* Cor sólida verde para destaque */
+        margin-bottom: 1rem;
+        text-align: center;
+        /* Centraliza o título */
+        text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+        /* Sombra para dar destaque e profundidade */
+        padding: 5px 0;
+        /* Adiciona um pequeno padding para não ficar colado nas bordas */
+    }
 }
 
 /* Animação de fade para o texto */
@@ -749,30 +774,6 @@ nav {
     }
 }
 
-#fotoProjeto h2 {
-    font-size: 3.5rem;
-    color: #32CD32;
-    /* Cor sólida verde para destaque */
-    margin-bottom: 1rem;
-    text-align: center;
-    /* Centraliza o título */
-    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
-    /* Sombra para dar destaque e profundidade */
-    padding: 5px 0;
-    /* Adiciona um pequeno padding para não ficar colado nas bordas */
-}
-
-/* Estilo do parágrafo sobre o Laerte */
-#fotoProjeto p {
-    font-size: 1.5rem;
-    color: #ccc;
-    line-height: 1.8;
-    max-width: 600px;
-    text-align: center;
-    /* Centraliza o parágrafo */
-    margin-top: 1rem;
-    animation: fadeInText 2s ease-in-out forwards;
-}
 
 /* Estilização da seção Parceiros */
 .partners {
@@ -982,7 +983,7 @@ body {
 
 /* Estilo geral da seção de News Letter */
 .blogs {
-    padding: 100px 20px;
+    padding: 10vh 0px;
     background-color: #f7f7f7;
     text-align: center;
 }
@@ -990,6 +991,14 @@ body {
 .blogs .heading {
     font-size: 4rem;
     margin-bottom: 50px;
+}
+
+#accessibility-modal {
+    position: fixed;
+    right: 0;
+    top: 30%;
+    transform: translateY(-50%);
+    z-index: 9999; /* Ensures it's above other content */
 }
 
 /* Layout geral da seção de notícias */

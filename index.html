@@ -7,13 +7,11 @@
     <title>Instituto Aeca</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
       <!-- Arquivo CSS para responsividade -->
       <link rel="stylesheet" href="./css/responsividade.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto:wght@300&display=swap"
         rel="stylesheet">
-    <script src="script.js"></script>
-    <script src="https://cdn.userway.org/widget.js" data-account="jye8ofUHcM"></script>
 
 </head>
 
@@ -27,15 +25,15 @@
                 </li>
                 <li>            <a href="#about-us">Sobre nós</a>
                 </li>
-                <li>            <a href="#about-us">Sobre nós</a>
+                <li>            <a href="#criador">Criador</a>
                 </li>
-                <li>            <a href="#about-us">Sobre nós</a>
+                <li>            <a href="#parceiros">Parceiros</a>
                 </li>
-                <li>            <a href="#about-us">Sobre nós</a>
+                <li>            <a href="#feedback">Avaliações</a>
                 </li>
-                <li>            <a href="#about-us">Sobre nós</a>
+                <li>            <a href="#inscricao">Local</a>
                 </li>
-                <li>            <a href="#about-us">Sobre nós</a>
+                <li>            <a href="#news-letter">News Letter</a>
                 </li>
             </ul>
         </nav>
@@ -104,15 +102,15 @@
 
        <section id="criador">
     <!-- Título Idealizador no fundo branco -->
-    <div class="titulo-idealizador">
-        <h1>Criador</h1>
-    </div>
-
     <!-- Conteúdo do Criador (Foto e texto sobre o Laerte) -->
     <div class="criador-content">
+        <div class="titulo-idealizador">
+            <h1>Criador</h1>
+        </div>
         <!-- Foto do Criador -->
+        
         <div class="left-content">
-            <img src="./images/larte pb.png" id="larte" alt="Imagem do Criador" class="fadeHmediaQ">
+            <img src="./images/larte pb.png" id="larte" alt="Imagem do Criador" >
         </div>
 
         <!-- Informações sobre o Criador -->
@@ -121,6 +119,7 @@
             <p>Através do Tênis, o professor Laerte entrou na universidade Puc - campinas aonde ganhou uma bolsa de
                 estudos para cursar Educação Física.</p>
         </div>
+        
     </div>
 
     <section class="partners" id="parceiros">
@@ -188,7 +187,7 @@
     </section>
 
     <section class="contact" id="inscricao">
-        <h1 class="heading"><span>Aonde</span> <span class="black">Estamos</span></h1>
+        <h1 class="heading"><span>Onde</span> <span class="black">Estamos</span></h1>
         <div class="contact-container">
             <div class="map-info">
                 <h2 class="bouncing-text">Venha nos visitar</h2>
@@ -279,6 +278,23 @@
         </div>
     </footer>
 
+    <script src="script.js"></script>
+
+    <!-- acessibilidade -->
+    <script
+        src="https://cdn.jsdelivr.net/gh/PrabothCharith/accessibility-plugin@main/accessibility-menu.min.js" ></script>
+
+    <!-- vlibras  -->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
 
 </body>
 
