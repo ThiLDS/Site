@@ -1,0 +1,140 @@
+/* Arquivo: responsive.css */
+
+
+
+/* Responsividade para telas menores (máximo de 800px de largura e 600px de altura) */
+@media screen and (max-width: 800px){
+    html {
+        font-size: 50%; /* Ajusta o tamanho base para textos menores */
+    }
+
+    /* Header */
+    .header {
+        height: 5rem; /* Reduz a altura do header */
+        padding: 1rem;
+        flex-direction: column; /* Organiza itens verticalmente */
+        gap: 1rem;
+    }
+
+    .header .logo img {
+        height: 8rem; /* Reduz o tamanho da logo */
+    }
+
+    .navbar a {
+        font-size: 1.2rem; /* Reduz os links do menu */
+        margin: 0 1rem;
+    }
+
+    /* Seção Home */
+    .home {
+        padding: 1rem;
+        background-size: cover; /* Mantém o fundo responsivo */
+    }
+
+    .home .content h3 {
+        font-size: 4rem; /* Ajusta o tamanho do título */
+    }
+
+    .home .content p {
+        font-size: 1.8rem; /* Ajusta o tamanho do parágrafo */
+    }
+
+    .home .content a.btn {
+        padding: 0.8rem 2rem; /* Reduz o tamanho do botão */
+        font-size: 1.5rem;
+    }
+
+    /* Seção Produtos */
+    .products .box-container {
+        grid-template-columns: 1fr; /* Coloca uma coluna */
+    }
+
+    /* Feedback */
+    .feedback-container {
+        flex-direction: column; /* Cards alinhados verticalmente */
+        gap: 2rem; /* Reduz o espaçamento */
+    }
+
+    .feedback-card {
+        width: 90%; /* Alarga os cards */
+        padding: 1.5rem;
+    }
+
+    /* Footer */
+    .footer {
+        flex-direction: column; /* Organiza itens verticalmente */
+        gap: 1.5rem;
+        padding: 1.5rem;
+        text-align: center; /* Centraliza conteúdo */
+    }
+
+    .footer-logo img {
+        width: 100px; /* Reduz tamanho da logo */
+        height: auto;
+    }
+
+    .footer-rights p {
+        margin-right: 0; /* Remove o deslocamento lateral */
+        font-size: 1.2rem; /* Ajusta tamanho do texto */
+    }
+
+    .footer-social {
+        flex-direction: column; /* Ícones em coluna */
+        gap: 1rem;
+    }
+
+    .footer-social a img {
+        width: 30px;
+        height: 30px; /* Reduz tamanho dos ícones */
+    }
+
+    /* Seção Criador */
+    .criador-content {
+        flex-direction: column; /* Ajusta texto e imagem para alinhamento vertical */
+        gap: 1.5rem;
+    }
+
+    #larte {
+        width: 70%; /* Reduz largura da imagem */
+        height: auto;
+    }
+
+    #fotoProjeto {
+        width: 90%; /* Ajusta o tamanho do texto */
+    }
+
+    /* Seção Parceiros */
+    .partners .box-container {
+        gap: 2rem; /* Reduz espaçamento entre elementos */
+    }
+
+    .partners .box {
+        width: 120px;
+        height: 120px; /* Ajusta tamanho dos cards */
+    }
+
+    /* Seção Sobre */
+    .about-row {
+        flex-direction: column; /* Alterna para coluna */
+        gap: 2rem;
+    }
+    .about-row.reverse {
+        flex-direction: column;
+        /* Reverte a ordem para alternar */
+    }
+
+    .about-row .about-image img {
+        max-width: 90%; /* Ajusta imagens */
+        max-height: 300px;
+    }
+
+    /* Seção Blogs */
+    .blog-container {
+        grid-template-columns: 1fr; /* Uma coluna para blogs */
+    }
+
+    .blog-card {
+        padding: 1rem; /* Reduz espaçamento interno */
+    }
+}
+

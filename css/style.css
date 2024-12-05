@@ -7,6 +7,8 @@
     --border: .1rem solid rgba(255, 255, 255, .3);
 }
 
+
+
 * {
     font-family: 'Roboto', sans-serif;
     margin: 0;
@@ -19,7 +21,8 @@
 }
 
 html {
-    font-size: 62.5%;
+    font-size: 56.25%;
+    /* 56.25% é equivalente a 10px, ajustado para a tela de 800x600 */
     overflow-x: hidden;
     scroll-padding-top: 9rem;
     scroll-behavior: smooth;
@@ -39,15 +42,18 @@ html::-webkit-scrollbar-thumb {
 }
 
 section {
-    padding: 2rem 7%;
+    padding: 1.5rem 5%;
+    /* Ajustado o padding para uma tela menor */
 }
 
 .heading {
     text-align: center;
     color: black;
     text-transform: uppercase;
-    padding-bottom: 3.5rem;
-    font-size: 4rem;
+    padding-bottom: 2rem;
+    /* Reduzido o padding */
+    font-size: 3.5rem;
+    /* Ajustado para a resolução */
 }
 
 .heading span {
@@ -58,78 +64,61 @@ section {
 .btn {
     margin-top: 1rem;
     display: inline-block;
-    padding: .9rem 3rem;
-    font-size: 1.7rem;
+    padding: .8rem 2.5rem;
+    font-size: 1.5rem;
     color: #fff;
     background: var(--main-color);
     cursor: pointer;
 }
 
-.header {
-    background: var(--bg);
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 1.5rem;
-    border-bottom: var(--border);
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-    height: 10rem;
-    /* Tamanho fixo da navbar */
-}
 
-.header .logo img {
-    height: 28rem;
-    /* A altura da logo será igual à altura da navbar */
-    width: auto;
-    /* Manter a proporção da imagem */
-    transform: scale(0);
-    /* Aumentar a logo para 1.5x do tamanho original */
-    transform-origin: center;
-    /* Garantir que a imagem aumente de forma proporcional */
-    transform: translateY(5rem);
-}
 
-.header .navbar {
-    flex: 2;
+/* nav */
+nav {
+    width: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
+    height: max-content;
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    background-color: #000;
+
+    img {
+        height: 80px;
+        justify-self: left;
+        margin-left: 2%;
+    }
+
+    ul {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        list-style: none;
+        width: 100%;
+
+        li {
+            text-decoration: none;
+            margin: 0 1%;
+
+            :hover {
+                color: var(--amareloJJ);
+            }
+
+            a {
+                font-size: 18px;
+                color: white;
+            }
+        }
+    }
 }
 
-.header .navbar a {
-    margin: 0 3rem;
-    /* Aumentei o espaçamento entre os links */
-    font-size: 1.6rem;
-    color: #fff;
-    text-align: center;
-}
+/* ===================================== */
 
-.header .navbar a {
-    position: relative;
-    overflow: hidden;
-    display: inline-block;
-}
 
-.header .navbar a::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 0.1rem;
-    background-color: var(--main-color);
-    transform: scaleX(0);
-    transform-origin: bottom right;
-    transition: transform 0.3s ease;
-}
 
-.header .navbar a:hover::after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
-}
+
 
 
 /* Fonte para o título */
@@ -298,26 +287,6 @@ section {
     /* Adiciona sombra para dar mais destaque */
 }
 
-
-/* Responsividade para telas pequenas */
-@media (max-width: 768px) {
-    .home .content h3 {
-        font-size: 4rem;
-        /* Ajusta o tamanho do título para telas menores */
-    }
-
-    .home .content p {
-        font-size: 2rem;
-        /* Ajusta o tamanho do texto */
-    }
-
-    .home .content a.btn {
-        font-size: 1.2rem;
-        /* Ajusta o tamanho do botão */
-        padding: 1rem 1.5rem;
-    }
-}
-
 /* Estilo da seção "about" */
 .about-section {
     padding: 5rem 7%;
@@ -357,23 +326,30 @@ section {
 
 /* Feedback Section */
 #feedback {
-    background-color: #e8f5e9; /* Verde suave para o fundo */
-    padding: 120px 40px; /* Espaçamento confortável */
-    font-family: 'Poppins', sans-serif; /* Substitua pela fonte do site */
+    background-color: #e8f5e9;
+    /* Verde suave para o fundo */
+    padding: 120px 40px;
+    /* Espaçamento confortável */
+    font-family: 'Poppins', sans-serif;
+    /* Substitua pela fonte do site */
     text-align: center;
 }
 
 .feedback-header h2 {
-    font-size: 5rem; /* Título ainda maior */
-    color: #61e00d; /* Verde escuro para o título */
+    font-size: 5rem;
+    /* Título ainda maior */
+    color: #61e00d;
+    /* Verde escuro para o título */
     margin-bottom: 30px;
     font-weight: bold;
     text-transform: uppercase;
 }
 
 .feedback-header p {
-    font-size: 2.2rem; /* Subtítulo maior */
-    color: #000000; /* Verde médio */
+    font-size: 2.2rem;
+    /* Subtítulo maior */
+    color: #000000;
+    /* Verde médio */
     margin-bottom: 60px;
     max-width: 900px;
     margin-left: auto;
@@ -384,13 +360,16 @@ section {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 50px; /* Espaçamento maior entre os cards */
+    gap: 50px;
+    /* Espaçamento maior entre os cards */
 }
 
 .feedback-card {
     background: #ffffff;
-    width: 600px; /* Mais largo para acompanhar o aumento de fonte */
-    padding: 70px; /* Mais espaço interno */
+    width: 600px;
+    /* Mais largo para acompanhar o aumento de fonte */
+    padding: 70px;
+    /* Mais espaço interno */
     border-radius: 25px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
     text-align: center;
@@ -401,12 +380,14 @@ section {
 }
 
 .feedback-card:hover {
-    transform: scale(1.1); /* Destaque ao hover */
+    transform: scale(1.1);
+    /* Destaque ao hover */
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
 }
 
 .feedback-photo {
-    width: 200px; /* Fotos ainda maiores */
+    width: 200px;
+    /* Fotos ainda maiores */
     height: 200px;
     border-radius: 50%;
     object-fit: cover;
@@ -414,21 +395,25 @@ section {
 }
 
 .feedback-content h3 {
-    font-size: 2.8rem; /* Nome do autor maior */
+    font-size: 2.8rem;
+    /* Nome do autor maior */
     color: #61e00d;
     margin: 20px 0 15px;
 }
 
 .feedback-stars {
-    font-size: 3rem; /* Estrelas maiores */
+    font-size: 3rem;
+    /* Estrelas maiores */
     color: #ffeb3b;
     margin: 15px 0 30px;
 }
 
 .feedback-content p {
-    font-size: 1.8rem; /* Feedback maior */
+    font-size: 1.8rem;
+    /* Feedback maior */
     color: #444;
-    line-height: 2; /* Maior espaçamento entre linhas */
+    line-height: 2;
+    /* Maior espaçamento entre linhas */
 }
 
 
@@ -477,7 +462,8 @@ section {
     font-size: 3.5rem;
     margin-bottom: 20px;
     color: #61e00d;
-    animation: bounce 1.5s infinite; /* Adiciona a animação de pular */
+    animation: bounce 1.5s infinite;
+    /* Adiciona a animação de pular */
 }
 
 .map-info p {
@@ -518,38 +504,39 @@ section {
 
 /* Animação de pular */
 @keyframes bounce {
-    0%, 100% {
-        transform: translateY(0); /* Posição inicial */
+
+    0%,
+    100% {
+        transform: translateY(0);
+        /* Posição inicial */
     }
+
     50% {
-        transform: translateY(-10px); /* Sobe um pouco */
+        transform: translateY(-10px);
+        /* Sobe um pouco */
     }
 }
-
-/* Responsividade */
-@media (max-width: 768px) {
-    .contact-container {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
-}
-
 
 
 /* Estilização do footer */
 /* Footer */
 .footer {
-    background-color: #000; /* Fundo completamente preto */
+    background-color: #000;
+    /* Fundo completamente preto */
     color: #fff;
     padding: 20px 50px;
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Distribui os itens horizontalmente */
+    justify-content: space-between;
+    /* Distribui os itens horizontalmente */
     width: 100%;
-    max-width: 100%; /* Garante que o footer ocupe toda a largura da tela */
+    max-width: 100%;
+    /* Garante que o footer ocupe toda a largura da tela */
     margin: 0 auto;
-    gap: 30px; /* Espaçamento entre os itens */
-    box-sizing: border-box; /* Garantir que o padding não cause overflow */
+    gap: 30px;
+    /* Espaçamento entre os itens */
+    box-sizing: border-box;
+    /* Garantir que o padding não cause overflow */
 }
 
 /* Logo */
@@ -568,7 +555,8 @@ section {
 .footer-rights {
     display: flex;
     flex-direction: column;
-    gap: 5px; /* Espaçamento entre os itens do texto */
+    gap: 5px;
+    /* Espaçamento entre os itens do texto */
     font-size: 0.9rem;
     color: #ccc;
     line-height: 1.8;
@@ -591,7 +579,8 @@ section {
 /* Redes sociais */
 .footer-social {
     align-items: center;
-    gap: 20px; /* Espaçamento entre os ícones */
+    gap: 20px;
+    /* Espaçamento entre os ícones */
 }
 
 .footer-social h4 {
@@ -611,7 +600,7 @@ section {
     filter: brightness(1.5);
 }
 
-#face-img{
+#face-img {
     margin-right: 4px;
 }
 
@@ -641,115 +630,14 @@ section {
     border-radius: 8px;
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
-    .footer {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .footer-logo, .footer-rights, .footer-social, .ods-cards {
-        flex: 1 1 100%; /* Faz os itens ocuparem 100% da largura em telas pequenas */
-        text-align: center;
-        margin-bottom: 20px;
-    }
-
-    .footer-logo img {
-        max-width: 150px; /* Ajusta o tamanho do logo em telas pequenas */
-    }
-
-    .footer-social, .ods-cards {
-        flex-direction: row;
-        justify-content: center;
-    }
-
-    .footer-social a img, .ods-card img {
-        width: 30px; /* Ajusta o tamanho das imagens em telas pequenas */
-    }
-}
-
-
-/* -------------------------------------------------------------------------------------------------------------------------- */
-
-/* MEDIA QUERIES  */
-@media (max-width:991px) {
-
-    html {
-        font-size: 55%;
-    }
-
-    .header {
-        padding: 1.5rem 2rem;
-    }
-
-    section {
-        padding: 2rem;
-    }
-
-}
-
-@media (max-width:768px) {
-
-    #menu-btn {
-        display: inline-block;
-    }
-
-    .header .navbar {
-        position: absolute;
-        top: 100%;
-        right: -100%;
-        background: #fff;
-        width: 30rem;
-        height: calc(100vh - 9.5rem);
-    }
-
-    .header .navbar.active {
-        right: 0;
-    }
-
-    .header .navbar a {
-        color: var(--black);
-        display: block;
-        margin: 1.5rem;
-        padding: .5rem;
-        font-size: 2rem;
-    }
-
-    .header .search-form {
-        width: 90%;
-        right: 2rem;
-    }
-
-    .home {
-        background-position: left;
-        justify-content: center;
-        text-align: center;
-    }
-
-    .home .content h3 {
-        font-size: 4.5rem;
-    }
-
-    .home .content p {
-        font-size: 1.5rem;
-    }
-
-}
-
-@media (max-width:450px) {
-
-    html {
-        font-size: 50%;
-    }
-
-}
-
 /* Estilo da seção Criador do Projeto */
 #criador {
-    width: 100vw; /* Ocupar toda a largura da tela */
+    width: 100vw;
+    /* Ocupar toda a largura da tela */
     height: auto;
     margin: 0 auto;
-    background: #ffffff; /* Fundo branco para a área do título */
+    background: #ffffff;
+    /* Fundo branco para a área do título */
     color: white;
     padding: 0;
 }
@@ -758,11 +646,13 @@ section {
 .titulo-idealizador {
     background-color: #ffffff;
     padding: 20px 0;
-    width: 100vw; /* Garantir que o título ocupe a largura total da tela */
+    width: 100vw;
+    /* Garantir que o título ocupe a largura total da tela */
     text-align: center;
     position: relative;
     z-index: 10;
-    margin-bottom: 10px; /* Espaço pequeno entre o título e o conteúdo */
+    margin-bottom: 10px;
+    /* Espaço pequeno entre o título e o conteúdo */
 }
 
 .titulo-idealizador h1 {
@@ -779,11 +669,16 @@ section {
 .criador-content {
     display: flex;
     align-items: center;
-    width: 100vw; /* Ocupar toda a largura da tela */
-    height: 100vh; /* Preenche toda a altura da tela */
-    margin: 0; /* Remove margens extras */
-    padding: 0; /* Ajuste o padding para não ter margem ao redor */
-    background: linear-gradient(135deg, #000000, #808080); /* Fundo gradiente preto e cinza */
+    width: 100vw;
+    /* Ocupar toda a largura da tela */
+    height: 100vh;
+    /* Preenche toda a altura da tela */
+    margin: 0;
+    /* Remove margens extras */
+    padding: 0;
+    /* Ajuste o padding para não ter margem ao redor */
+    background: linear-gradient(135deg, #000000, #808080);
+    /* Fundo gradiente preto e cinza */
 }
 
 /* Foto do Criador com efeito de bordas ofuscadas */
@@ -819,6 +714,7 @@ section {
     0% {
         transform: scale(0.8);
     }
+
     100% {
         transform: scale(1);
     }
@@ -829,31 +725,41 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center; /* Alinha o texto ao centro */
-    width: 40%; /* Ajusta a largura do texto à direita da imagem */
+    align-items: center;
+    /* Alinha o texto ao centro */
+    width: 40%;
+    /* Ajusta a largura do texto à direita da imagem */
     animation: fadeInText 2s ease-in-out forwards;
-    text-align: center; /* Centraliza o texto */
+    text-align: center;
+    /* Centraliza o texto */
 }
 
 /* Animação de fade para o texto */
 @keyframes fadeInText {
     0% {
         opacity: 0;
-        transform: translateX(20px); /* Inicia movendo o texto para a direita */
+        transform: translateX(20px);
+        /* Inicia movendo o texto para a direita */
     }
+
     100% {
         opacity: 1;
-        transform: translateX(0); /* Termina no centro */
+        transform: translateX(0);
+        /* Termina no centro */
     }
 }
 
 #fotoProjeto h2 {
     font-size: 3.5rem;
-    color: #32CD32; /* Cor sólida verde para destaque */
+    color: #32CD32;
+    /* Cor sólida verde para destaque */
     margin-bottom: 1rem;
-    text-align: center; /* Centraliza o título */
-    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5); /* Sombra para dar destaque e profundidade */
-    padding: 5px 0; /* Adiciona um pequeno padding para não ficar colado nas bordas */
+    text-align: center;
+    /* Centraliza o título */
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+    /* Sombra para dar destaque e profundidade */
+    padding: 5px 0;
+    /* Adiciona um pequeno padding para não ficar colado nas bordas */
 }
 
 /* Estilo do parágrafo sobre o Laerte */
@@ -862,42 +768,11 @@ section {
     color: #ccc;
     line-height: 1.8;
     max-width: 600px;
-    text-align: center; /* Centraliza o parágrafo */
+    text-align: center;
+    /* Centraliza o parágrafo */
     margin-top: 1rem;
     animation: fadeInText 2s ease-in-out forwards;
 }
-
-/* Responsividade */
-@media (max-width: 768px) {
-    #criador {
-        padding-top: 30px;
-    }
-
-    .criador-content {
-        flex-direction: column;
-        gap: 15px;
-        padding: 1rem;
-    }
-
-    #larte {
-        width: 80%;
-        max-width: 300px;
-    }
-
-    #fotoProjeto h2 {
-        font-size: 2rem;
-    }
-
-    #fotoProjeto p {
-        font-size: 1.2rem;
-    }
-
-    .titulo-idealizador {
-        font-size: 2rem;
-    }
-}
-
-
 
 /* Estilização da seção Parceiros */
 .partners {
@@ -963,21 +838,6 @@ section {
     /* Efeito no hover */
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
-    .partners .row {
-        flex-wrap: wrap;
-        gap: 1.5rem;
-    }
-
-    .partners .box {
-        width: 150px;
-        height: 150px;
-    }
-}
-
-
-
 body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
@@ -985,6 +845,7 @@ body {
     padding: 0;
     background-color: var(--bg-color);
     text-align: center;
+    overflow-x: hidden;
 }
 
 .about-section {
@@ -1058,7 +919,7 @@ body {
 
 /* Ajustes gerais para as imagens */
 .about-row .about-image img {
-    max-width: 120%;
+    max-width: 100%;
     /* Aumenta a largura das imagens */
     height: auto;
     /* Ajusta a altura para preservar a proporção */
@@ -1071,16 +932,6 @@ body {
     /* Define a altura máxima das imagens */
     box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
     /* Adiciona um leve efeito de sombra */
-}
-
-/* Para telas maiores */
-@media (min-width: 1200px) {
-    .about-row .about-image img {
-        max-width: 130%;
-        /* Aumenta a largura das imagens em telas grandes */
-        max-height: 750px;
-        /* Define uma altura máxima maior */
-    }
 }
 
 /* Adicionando hover para realce */
@@ -1129,20 +980,6 @@ body {
     font-weight: 400;
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
-    .about-row {
-        flex-direction: column;
-    }
-
-    .about-content {
-        max-width: 90%;
-    }
-
-    .about-image img {
-        max-width: 100%;
-    }
-}
 /* Estilo geral da seção de News Letter */
 .blogs {
     padding: 100px 20px;
@@ -1172,7 +1009,8 @@ body {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     padding: 20px;
-    text-align: center; /* Centraliza os textos do título e subtítulo */
+    text-align: center;
+    /* Centraliza os textos do título e subtítulo */
 }
 
 .blog-card:hover {
@@ -1212,25 +1050,12 @@ body {
     line-height: 1.6;
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
-    .blogs .heading {
-        font-size: 3.5rem;
-    }
 
-    .blog-container {
-        grid-template-columns: 1fr;
-    }
-
-    .blog-card {
-        text-align: center;
-    }
-
-    .blog-title {
-        font-size: 2rem;
-    }
-
-    .blog-subtitle {
-        font-size: 1.5rem;
-    }
+/* grid 2 colunas sem gap e sem alinhamento */
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 48%);
+    align-items: center;
+    justify-content: center;
+    width: 100%;
 }
