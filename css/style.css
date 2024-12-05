@@ -669,6 +669,7 @@ nav {
 .criador-content {
     display: flex;
     align-items: center;
+    flex-direction: column;
     width: 100%;
     /* Ocupar toda a largura da tela */
         /* Preenche toda a altura da tela */
@@ -684,7 +685,7 @@ nav {
 }
 /* Foto do Criador com efeito de bordas ofuscadas */
 #larte {
-    height: 100px;
+    height: 600px;
     object-fit: contain;
     object-position: center;
     opacity: 1;
