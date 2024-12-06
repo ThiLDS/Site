@@ -997,7 +997,7 @@ body {
 #accessibility-modal {
     position: fixed;
     right: 0;
-    top: 30%;
+    top: 55%;
     transform: translateY(-50%);
     z-index: 9999; /* Ensures it's above other content */
 }
